@@ -1,11 +1,113 @@
 <!DOCTYPE html>
-<html lang="pt-br">
+<html lang="pt-BR">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>AT01 — Formulário de Contato</title>
+  <title>Atividade 2 - Capítulo 5</title>
 </head>
 <body>
+    <header>
+      <h1>Atividade 2 do Capítulo 5: Cadastro de Usuário</h1>
   
+      <section>
+        <h2>Material de Apoio:</h2>
+        <p>
+            <a href="https://leofernandesmo.github.io/pweb1-book/chapters/05-formularios/" target="_blank" rel="noopener noreferrer">
+                Capítulo 5 - Formulários HTML - Programação Web 1, Leonardo Fernades
+            </a>
+        </p>
+      </section>
+    </header>
+
+    <main>
+      <form action="https://httpbin.org/post" method="POST">
+        <fieldset>
+          <legend>Informações da conta</legend>
+          
+          <label for="name">Nome:</label>
+          <input 
+              type="text" 
+              id="name" 
+              name="name" 
+              minlength="3"
+              maxlength="100"
+              autocomplete="name"
+              placeholder="Maria Joaquina"
+              required
+          >
+
+          <label for="email">Email: <span aria-hidden="true">*</span></label>
+          <input 
+              type="email" 
+              id="email" 
+              name="email" 
+              minlength="3"
+              maxlength="150"
+              autocomplete="email"
+              placeholder="maria.joaquina@dominio.com"
+              aria-required="true"
+              required
+          >
+
+          <label for="password">Senha:</label>
+          <input 
+              type="password" 
+              id="password" 
+              name="password" 
+              minlength="8"
+              maxlength="72"
+              autocomplete="current-password"
+              placeholder="Digite sua senha"
+              pattern="(?=.*[A-Za-z])(?=.*\d).{8,}"
+              title="Mínimo de 8 caracteres, incluindo ao menos uma letra e um número"
+              required
+          >
+        </fieldset>
+
+        <fieldset>
+          <legend>Dados pessoais</legend>
+
+          <label for="nascimento">Data de nascimento:</label>
+          <input 
+              type="date" 
+              id="nascimento" 
+              name="nascimento" 
+              min="1900-01-01"
+              max="2025-12-31"
+              required
+          >
+          
+          <fieldset>
+            <legend>Gênero:</legend>
+            <div>
+              <input type="radio" id="genero-masculino" name="genero" value="masculino" />
+              <label for="genero-masculino">Masculino</label>
+            </div>
+            <div>
+              <input type="radio" id="genero-feminino" name="genero" value="feminino" />
+              <label for="genero-feminino">Feminino</label>
+            </div>
+            <div>
+              <input type="radio" id="genero-outro" name="genero" value="outro" />
+              <label for="genero-outro">Outro</label>
+            </div>
+            <div>
+              <input type="radio" id="genero-nao-informar" name="genero" value="nao-informar" />
+              <label for="genero-nao-informar">Prefiro não informar</label>
+            </div>
+          </fieldset>
+        </fieldset>
+
+        <input type="checkbox" id="aceite" name="aceite" value="sim" required />
+        <label for="aceite">Eu li e aceito os termos de uso.</label>
+
+        <button type="submit">Criar conta</button>
+        <button type="reset">Limpar campos</button>
+      </form>
+    </main>
+    
+    <footer>
+      <p>&copy; Miguel Laurentino - 2026</p>
+    </footer>
 </body>
 </html>
