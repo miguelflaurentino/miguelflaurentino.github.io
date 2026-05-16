@@ -1,75 +1,75 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="pt-BR">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Atividade 1 - Capítulo 5</title>
-</head>
-<body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Atividade 1 - Capítulo 5</title>
+  </head>
+  <body>
     <header>
       <h1>Atividade 1 do Capítulo 5: Formulário de Contato Simples</h1>
 
-    <nav aria-label="Navegação secundária">
-      <ul>
-        <li><a href="../index.html">Voltar para a página principal</a></li>
-      </ul>
-    </nav>
+      <nav aria-label="Navegação secundária">
+        <ul>
+          <li><a href="../index.html">Voltar para a página principal</a></li>
+        </ul>
+      </nav>
     </header>
 
     <main>
       <form action="https://httpbin.org/get" method="GET">
         <fieldset>
           <legend>Informações de contato</legend>
-          
+
           <label for="name">Nome:</label>
-          <input 
-              type="text" 
-              id="name" 
-              name="name" 
-              minlength="3"
-              maxlength="100"
-              autocomplete="name"
-              placeholder="Maria Joaquina"
-              required
-          >
+          <input
+            type="text"
+            id="name"
+            name="name"
+            minlength="3"
+            maxlength="100"
+            autocomplete="name"
+            placeholder="Maria Joaquina"
+            required
+          />
 
           <label for="email">Email:</label>
-          <input 
-              type="text" 
-              id="email" 
-              name="email" 
-              minlength="3"
-              maxlength="150"
-              autocomplete="email"
-              placeholder="maria.joaquina@dominio.com"
-              required
-          >
+          <input
+            type="text"
+            id="email"
+            name="email"
+            minlength="3"
+            maxlength="150"
+            autocomplete="email"
+            placeholder="maria.joaquina@dominio.com"
+            required
+          />
         </fieldset>
 
         <fieldset>
           <legend>Informações da mensagem</legend>
 
           <label for="assunto">Assunto:</label>
-          <input 
-              type="text" 
-              id="assunto" 
-              name="assunto" 
-              minlength="3"
-              maxlength="150"
-              autocomplete="on"
-              placeholder="Assunto da mensagem"
-              required
-          >
-          
+          <input
+            type="text"
+            id="assunto"
+            name="assunto"
+            minlength="3"
+            maxlength="150"
+            autocomplete="on"
+            placeholder="Assunto da mensagem"
+            required
+          />
+
           <label for="message">Mensagem:</label>
-          <textarea 
-              id="message" 
-              name="message" 
-              rows="5"
-              cols="50"
-              placeholder="Digite sua mensagem aqui..."
-              autocomplete="off"
-              required
+          <textarea
+            id="message"
+            name="message"
+            rows="5"
+            cols="50"
+            placeholder="Digite sua mensagem aqui..."
+            autocomplete="off"
+            required
           ></textarea>
         </fieldset>
 
@@ -77,17 +77,23 @@
         <button type="reset">Limpar</button>
       </form>
     </main>
-    
+
     <footer>
-    <section>
-      <h2>Material de Apoio</h2>
-      <p>
-        <a href="https://leofernandesmo.github.io/pweb1-book/chapters/05-formularios/" target="_blank" rel="noopener noreferrer">
-          Capítulo 5 - Formulários HTML - Programação Web 1, Leonardo Fernandes
-        </a>
-      </p>
-    </section>
+      <section>
+        <h2>Material de Apoio</h2>
+        <p>
+          <a
+            href="https://leofernandesmo.github.io/pweb1-book/chapters/05-formularios/"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            Capítulo 5 - Formulários HTML - Programação Web 1, Leonardo
+            Fernandes
+          </a>
+        </p>
+      </section>
       <p>&copy; Miguel Laurentino - 2026</p>
     </footer>
-</body>
+  </body>
 </html>
+

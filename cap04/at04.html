@@ -1,19 +1,19 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="pt-BR">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Atividade 4 - Capitulo 4</title>
-</head>
-<body>
-      <header>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Atividade 4 - Capitulo 4</title>
+  </head>
+  <body>
+    <header>
       <h1>Atividade 4 do Capítulo 4: Listas Avançadas e Glossário Técnico</h1>
 
-    <nav aria-label="Navegação secundária">
-      <ul>
-        <li><a href="../index.html">Voltar para a página principal</a></li>
-      </ul>
-    </nav>
+      <nav aria-label="Navegação secundária">
+        <ul>
+          <li><a href="../index.html">Voltar para a página principal</a></li>
+        </ul>
+      </nav>
     </header>
 
     <main>
@@ -21,20 +21,32 @@
         <h2>Bloco 1 - Vídeo com legenda e poster</h2>
 
         <figure>
-        <video 
-          width="800" 
-          height="450" 
-          controls
-          poster="../assets/poster.png"
-          preload="metadata"
-        >
-        <source src="../assets/video_cachyos_kde.mp4" type="video/mp4">
-        <source src="../assets/video_cachyos_kde.webm" type="video/webm">
-        <track kind="subtitles" srclang="pt" label="Português" default src="legendas/aula-html.vtt">
-        <p>Seu navegador não suporta vídeo HTML5. <a href="../assets/video_cachyos_kde.mp4">Baixe o vídeo aqui</a>.</p>
-      </video>
-      <figcaption>Demostração de setup com CachyOS rodando com o Desktop Environment KDE Plasma com o script do Krohnkite.</figcaption>
-    </figure>
+          <video
+            width="800"
+            height="450"
+            controls
+            poster="../assets/poster.png"
+            preload="metadata"
+          >
+            <source src="../assets/video_cachyos_kde.mp4" type="video/mp4" />
+            <source src="../assets/video_cachyos_kde.webm" type="video/webm" />
+            <track
+              kind="subtitles"
+              srclang="pt"
+              label="Português"
+              default
+              src="legendas/aula-html.vtt"
+            />
+            <p>
+              Seu navegador não suporta vídeo HTML5.
+              <a href="../assets/video_cachyos_kde.mp4">Baixe o vídeo aqui</a>.
+            </p>
+          </video>
+          <figcaption>
+            Demostração de setup com CachyOS rodando com o Desktop Environment
+            KDE Plasma com o script do Krohnkite.
+          </figcaption>
+        </figure>
       </section>
 
       <section>
@@ -42,12 +54,21 @@
 
         <figure>
           <audio controls preload="metadata">
-            <source src="../assets/fassounds-escape-your-love-upbeat-fashion-pop-dance-412230.mp3" type="audio/mp3">
-            <source src="../assets/fassounds-escape-your-love-upbeat-fashion-pop-dance-412230.ogg" type="audio/ogg">
-            
+            <source
+              src="../assets/fassounds-escape-your-love-upbeat-fashion-pop-dance-412230.mp3"
+              type="audio/mp3"
+            />
+            <source
+              src="../assets/fassounds-escape-your-love-upbeat-fashion-pop-dance-412230.ogg"
+              type="audio/ogg"
+            />
+
             <p>
-            Seu navegador não suporta áudios HTML5.
-            <a href="../assets/fassounds-escape-your-love-upbeat-fashion-pop-dance-412230.mp3">Baixe o áudio aqui.</a>
+              Seu navegador não suporta áudios HTML5.
+              <a
+                href="../assets/fassounds-escape-your-love-upbeat-fashion-pop-dance-412230.mp3"
+                >Baixe o áudio aqui.</a
+              >
             </p>
           </audio>
           <figcaption>
@@ -60,9 +81,28 @@
         <h2>Bloco 3 - Vídeo externo (YouTube) via <code>iframe</code></h2>
 
         <figure>
-          <iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/aFyL79gfFxs?si=y4FYgoP4FG0HZgAX" title="Um Desktop Linux que… desliza? 🤯" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+          <iframe
+            width="560"
+            height="315"
+            src="https://www.youtube-nocookie.com/embed/aFyL79gfFxs?si=y4FYgoP4FG0HZgAX"
+            title="Um Desktop Linux que… desliza? 🤯"
+            frameborder="0"
+            allow="
+              accelerometer;
+              autoplay;
+              clipboard-write;
+              encrypted-media;
+              gyroscope;
+              picture-in-picture;
+              web-share;
+            "
+            referrerpolicy="strict-origin-when-cross-origin"
+            allowfullscreen
+          ></iframe>
           <figcaption>
-            Descrição do vídeo: Hoje vamos explorar uma variação do CachyOS com o Niri e o Noctalia Shell. Esse conjunto improvável oferece uma experiência única para os usuários de Linux.
+            Descrição do vídeo: Hoje vamos explorar uma variação do CachyOS com
+            o Niri e o Noctalia Shell. Esse conjunto improvável oferece uma
+            experiência única para os usuários de Linux.
           </figcaption>
         </figure>
       </section>
@@ -71,26 +111,37 @@
         <h2>Bloco 4 - Imagem responsiva com <code>picture</code></h2>
         <figure>
           <picture>
-            <source media="(min-width: 768px)" srcset="">
-            <img src="<!-- img/banner-mobile -->" alt="Descrição da imagem fictícia (que nem existe)" width="" height="">
+            <source media="(min-width: 768px)" srcset="" />
+            <img
+              src="<!-- img/banner-mobile -->"
+              alt="Descrição da imagem fictícia (que nem existe)"
+              width=""
+              height=""
+            />
           </picture>
           <figcaption>
-            Aqui deveria ter uma imagem responsiva. Esse é o <code>figcaption</code>.
+            Aqui deveria ter uma imagem responsiva. Esse é o
+            <code>figcaption</code>.
           </figcaption>
         </figure>
       </section>
     </main>
 
     <footer>
-    <section>
-      <h2>Material de Apoio</h2>
-      <p>
-        <a href="https://leofernandesmo.github.io/pweb1-book/chapters/04-tabelas-listas-midia/" target="_blank" rel="noopener noreferrer">
-          Capítulo 4 - Tabelas, Listas e Mídia - Programação Web 1, Leonardo Fernandes
-        </a>
-      </p>
-    </section>
+      <section>
+        <h2>Material de Apoio</h2>
+        <p>
+          <a
+            href="https://leofernandesmo.github.io/pweb1-book/chapters/04-tabelas-listas-midia/"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            Capítulo 4 - Tabelas, Listas e Mídia - Programação Web 1, Leonardo
+            Fernandes
+          </a>
+        </p>
+      </section>
       <p>&copy; Miguel Laurentino - 2026</p>
     </footer>
-</body>
+  </body>
 </html>

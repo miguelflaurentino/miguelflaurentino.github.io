@@ -1,97 +1,108 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="pt-BR">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Atividade 4 - Capítulo 5</title>
-</head>
-<body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Atividade 4 - Capítulo 5</title>
+  </head>
+  <body>
     <header>
       <h1>Atividade 4 do Capítulo 5: Inscrição — Semana de Tecnologia IFAL</h1>
 
-    <nav aria-label="Navegação secundária">
-      <ul>
-        <li><a href="../index.html">Voltar para a página principal</a></li>
-      </ul>
-    </nav>
+      <nav aria-label="Navegação secundária">
+        <ul>
+          <li><a href="../index.html">Voltar para a página principal</a></li>
+        </ul>
+      </nav>
     </header>
 
     <main>
-      <form action="https://httpbin.org/post" method="post" enctype="multipart/form-data">
-
-        <input type="hidden" name="edicao" value="2026">
+      <form
+        action="https://httpbin.org/post"
+        method="post"
+        enctype="multipart/form-data"
+      >
+        <input type="hidden" name="edicao" value="2026" />
 
         <fieldset>
           <legend>Identificação do participante</legend>
 
           <div class="campos">
-            <label for="nome">Nome completo: <span aria-hidden="true">*</span></label>
-            <input
-                type="text"
-                id="nome"
-                name="nome"
-                minlength="5"
-                maxlength="100"
-                autocomplete="name"
-                placeholder="Digite seu nome completo"
-                title="Informe seu nome completo (mínimo 5 caracteres)"
-                aria-required="true"
-                required
+            <label for="nome"
+              >Nome completo: <span aria-hidden="true">*</span></label
             >
+            <input
+              type="text"
+              id="nome"
+              name="nome"
+              minlength="5"
+              maxlength="100"
+              autocomplete="name"
+              placeholder="Digite seu nome completo"
+              title="Informe seu nome completo (mínimo 5 caracteres)"
+              aria-required="true"
+              required
+            />
           </div>
 
           <div class="campos">
-            <label for="email">E-mail institucional: <span aria-hidden="true">*</span></label>
-            <input
-                type="email"
-                id="email"
-                name="email"
-                autocomplete="email"
-                placeholder="seu.email@ifal.edu.br"
-                pattern=".+@aluno\.ifal\.edu\.br$|.+@ifal\.edu\.br$"
-                title="Informe apenas e-mails institucionais terminados em @aluno.ifal.edu.br ou @ifal.edu.br"
-                aria-required="true"
-                required
+            <label for="email"
+              >E-mail institucional: <span aria-hidden="true">*</span></label
             >
+            <input
+              type="email"
+              id="email"
+              name="email"
+              autocomplete="email"
+              placeholder="seu.email@ifal.edu.br"
+              pattern=".+@aluno\.ifal\.edu\.br$|.+@ifal\.edu\.br$"
+              title="Informe apenas e-mails institucionais terminados em @aluno.ifal.edu.br ou @ifal.edu.br"
+              aria-required="true"
+              required
+            />
           </div>
 
           <div class="campos">
             <label for="cidade">Cidade de origem:</label>
             <input
-                type="text"
-                id="cidade"
-                name="cidade"
-                list="cidades-alagoanas"
-                placeholder="Digite sua cidade ou escolha uma da lista"
-                title="Digite o nome da sua cidade de origem"
-            >
+              type="text"
+              id="cidade"
+              name="cidade"
+              list="cidades-alagoanas"
+              placeholder="Digite sua cidade ou escolha uma da lista"
+              title="Digite o nome da sua cidade de origem"
+            />
             <datalist id="cidades-alagoanas">
-              <option value="Maceió">
-              <option value="Arapiraca">
-              <option value="Palmeira dos Índios">
-              <option value="Penedo">
-              <option value="Rio Largo">
-              <option value="União dos Palmares">
-              <option value="Marechal Deodoro">
-              <option value="Coruripe">
-              <option value="Delmiro Gouveia">
-              <option value="Campo Alegre">
+              <option value="Maceió"></option>
+              <option value="Arapiraca"></option>
+              <option value="Palmeira dos Índios"></option>
+              <option value="Penedo"></option>
+              <option value="Rio Largo"></option>
+              <option value="União dos Palmares"></option>
+              <option value="Marechal Deodoro"></option>
+              <option value="Coruripe"></option>
+              <option value="Delmiro Gouveia"></option>
+              <option value="Campo Alegre"></option>
             </datalist>
           </div>
 
           <div class="campos">
-            <label for="foto">Foto para crachá: <span aria-hidden="true">*</span></label>
-            <input
-                type="file"
-                id="foto"
-                name="foto"
-                accept="image/jpeg,image/png,.jpg,.jpeg,.png"
-                title="Selecione uma foto sua nos formatos JPG ou PNG"
-                aria-required="true"
-                aria-describedby="foto-instrucao"
-                required
+            <label for="foto"
+              >Foto para crachá: <span aria-hidden="true">*</span></label
             >
-            <small id="foto-instrucao">Formatos aceitos: JPG e PNG. Tamanho máximo: 2 MB.</small>
+            <input
+              type="file"
+              id="foto"
+              name="foto"
+              accept="image/jpeg,image/png,.jpg,.jpeg,.png"
+              title="Selecione uma foto sua nos formatos JPG ou PNG"
+              aria-required="true"
+              aria-describedby="foto-instrucao"
+              required
+            />
+            <small id="foto-instrucao"
+              >Formatos aceitos: JPG e PNG. Tamanho máximo: 2 MB.</small
+            >
           </div>
         </fieldset>
 
@@ -101,11 +112,11 @@
           <div class="campos">
             <label for="chegada">Data e hora preferida para chegada:</label>
             <input
-                type="datetime-local"
-                id="chegada"
-                name="chegada"
-                title="Selecione a data e hora em que pretende chegar ao evento"
-            >
+              type="datetime-local"
+              id="chegada"
+              name="chegada"
+              title="Selecione a data e hora em que pretende chegar ao evento"
+            />
           </div>
 
           <div class="campos">
@@ -113,41 +124,47 @@
               Nível de experiência: <span id="valor-experiencia">5</span>/10
             </label>
             <input
-                type="range"
-                id="experiencia"
-                name="experiencia"
-                min="0"
-                max="10"
-                step="1"
-                value="5"
-                title="Arraste para definir seu nível de experiência em programação"
-                aria-valuemin="0"
-                aria-valuemax="10"
-                aria-valuenow="5"
-                oninput="document.getElementById('valor-experiencia').textContent = this.value; this.setAttribute('aria-valuenow', this.value)"
-            >
+              type="range"
+              id="experiencia"
+              name="experiencia"
+              min="0"
+              max="10"
+              step="1"
+              value="5"
+              title="Arraste para definir seu nível de experiência em programação"
+              aria-valuemin="0"
+              aria-valuemax="10"
+              aria-valuenow="5"
+              oninput="
+                document.getElementById('valor-experiencia').textContent =
+                  this.value;
+                this.setAttribute('aria-valuenow', this.value);
+              "
+            />
           </div>
 
           <div class="campos">
-            <label for="cor_camiseta">Cor de preferência para a camiseta:</label>
-            <input
-                type="color"
-                id="cor_camiseta"
-                name="cor_camiseta"
-                value="#1a73e8"
-                title="Escolha a cor de sua preferência para a camiseta do evento"
+            <label for="cor_camiseta"
+              >Cor de preferência para a camiseta:</label
             >
+            <input
+              type="color"
+              id="cor_camiseta"
+              name="cor_camiseta"
+              value="#1a73e8"
+              title="Escolha a cor de sua preferência para a camiseta do evento"
+            />
           </div>
 
           <div class="campos">
             <label for="oficinas">Oficinas de interesse:</label>
             <select
-                name="oficinas[]"
-                id="oficinas"
-                multiple
-                size="4"
-                title="Selecione uma ou mais oficinas de seu interesse"
-                aria-describedby="oficinas-instrucao"
+              name="oficinas[]"
+              id="oficinas"
+              multiple
+              size="4"
+              title="Selecione uma ou mais oficinas de seu interesse"
+              aria-describedby="oficinas-instrucao"
             >
               <option value="dweb">Desenvolvimento Web</option>
               <option value="ia">Inteligência Artificial</option>
@@ -155,7 +172,10 @@
               <option value="dados">Ciência de Dados</option>
               <option value="seg">Segurança Cibernética</option>
             </select>
-            <small id="oficinas-instrucao">Use Ctrl (ou Cmd no Mac) para selecionar mais de uma oficina.</small>
+            <small id="oficinas-instrucao"
+              >Use Ctrl (ou Cmd no Mac) para selecionar mais de uma
+              oficina.</small
+            >
           </div>
         </fieldset>
 
@@ -164,15 +184,20 @@
     </main>
 
     <footer>
-    <section>
-      <h2>Material de Apoio</h2>
-      <p>
-        <a href="https://leofernandesmo.github.io/pweb1-book/chapters/05-formularios/" target="_blank" rel="noopener noreferrer">
-          Capítulo 5 - Formulários HTML - Programação Web 1, Leonardo Fernandes
-        </a>
-      </p>
-    </section>
+      <section>
+        <h2>Material de Apoio</h2>
+        <p>
+          <a
+            href="https://leofernandesmo.github.io/pweb1-book/chapters/05-formularios/"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            Capítulo 5 - Formulários HTML - Programação Web 1, Leonardo
+            Fernandes
+          </a>
+        </p>
+      </section>
       <p>&copy; Miguel Laurentino - 2026</p>
     </footer>
-</body>
+  </body>
 </html>
