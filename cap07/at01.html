@@ -4,6 +4,51 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Atividade 1 - Capítulo 7</title>
+
+    <style>
+      *,
+      *::before,
+      *::after {
+        box-sizing: border-box;
+      }
+
+      body {
+        font-family: "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+        background-color: aliceblue;
+        text-align: center;
+      }
+
+      main {
+        display: flex;
+        justify-content: center;
+      }
+
+      .cartao {
+        background-color: white;
+        border-radius: 15px;
+        padding: 2rem;
+        width: clamp(350px, 50%, 600px);
+      }
+
+      h2.cartao-nome {
+        font-size: 2rem;
+        color: black;
+      }
+
+      hr.cartao-divisor {
+        border: 2px solid #808080;
+        border-radius: 10px;
+      }
+
+      .cartao-cargo {
+        font-style: italic;
+        color: #808080;
+      }
+
+      .cartao-email {
+        font-size: 0.75rem;
+      }
+    </style>
   </head>
   <body>
     <header>
@@ -16,7 +61,17 @@
       </nav>
     </header>
 
-    <main></main>
+    <main>
+      <article class="cartao">
+        <h2 class="cartao-nome">Miguel Ferreira Laurentino</h2>
+
+        <hr class="cartao-divisor" />
+
+        <p class="cartao-cargo">Estudante</p>
+        <p>Bacharelado em Sistemas de Informação</p>
+        <p class="cartao-email">mfl15@aluno.ifal.edu.br</p>
+      </article>
+    </main>
 
     <footer>
       <section>
@@ -32,6 +87,7 @@
           </a>
         </p>
       </section>
+      <p>&copy; Miguel Laurentino - 2026</p>
     </footer>
   </body>
 </html>
