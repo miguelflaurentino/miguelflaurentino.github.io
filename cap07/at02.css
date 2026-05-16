@@ -1,3 +1,5 @@
+/* ─── 1. Reset ─────────────────────────────────────────────────── */
+
 *,
 *::before,
 *::after {
@@ -6,6 +8,10 @@
   padding: 0;
 }
 
+/* ─── 2. Variables ─────────────────────────────────────────────── */
+
+/* ─── 3. Base ──────────────────────────────────────────────────── */
+
 html {
   font-size: 16px;
 }
@@ -13,5 +19,64 @@ html {
 body {
   font-family: "Strichpunkt Sans", sans-serif;
   line-height: 1.5;
-  background-color: aliceblue;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
 }
+
+main {
+  background-color: aliceblue;
+  border-radius: 20px;
+  flex: 1;
+  min-width: 600px;
+  display: flex;
+  align-items: center;
+}
+
+h1 {
+  font-size: 2rem;
+  font-weight: 600;
+  margin-bottom: 1rem;
+}
+
+h2 {
+  font-size: 1.25rem;
+  margin: 0.75rem 0.5rem;
+}
+
+p {
+  margin-bottom: 0.5rem;
+  font-size: 1rem;
+}
+
+blockquote {
+  border-left: 4px solid gray;
+  border-radius: 15px;
+  padding-left: 1rem;
+  font-style: italic;
+  color: gray;
+}
+
+header,
+footer {
+  padding: 1rem 0.5rem;
+  background-color: white;
+  /*
+   * Visualmente, o background-color do footer e do header estão diferentes.
+   * Não está explicito em código porque se estivesse, não seria possível
+   * fazer de modo simples o efeito do footer e do header envolvendo o conteúdo
+   * central através do border-radius.
+  */
+}
+
+/* ─── 4. Container ─────────────────────────────────────────────── */
+
+.container {
+  width: clamp(600px, 100%, 800px);
+  margin: 0 auto;
+  padding: 0.5rem;
+}
+
+/* ─── 5. Components ────────────────────────────────────────────── */
+
+/* ─── 6. Utilities ─────────────────────────────────────────────── */
