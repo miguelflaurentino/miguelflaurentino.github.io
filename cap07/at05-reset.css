@@ -1,0 +1,82 @@
+/* Josh Comeau Modern Reset: https://www.joshwcomeau.com/css/custom-css-reset/ */
+
+/* ─── Reset moderno - Baseado em   e Leonardo Fernandes ─────────── */
+
+/* 1. Reset universal */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+/* 2. Animações de palavras-chave  */
+@media (prefers-reduced-motion: no-preference) {
+  html {
+    interpolate-size: allow-keywords;
+  }
+}
+
+/* 3. Configurações raiz  */
+html {
+  font-size: 16px;
+  scroll-behavior: smooth;
+  -webkit-text-size-adjust: 100%;
+}
+
+/* 4. Configurações de corpo  */
+body {
+  min-height: 100vh;
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* 5. Comportamento de mídia */
+img,
+picture,
+video,
+canvas,
+svg {
+  display: block;
+  max-width: 100%;
+}
+
+/* 6. Herança de tipografia para formulários */
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+/* 7. Evitar transbordamento de texto */
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  overflow-wrap: break-word;
+}
+
+/* 8. Melhorias visuais em blocos de texto  */
+p {
+  text-wrap: pretty;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  text-wrap: balance;
+}
+
+/* 9. Contexto de empilhamento para frameworks JS  */
+#root,
+#__next {
+  isolation: isolate;
+}
