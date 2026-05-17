@@ -1,0 +1,49 @@
+:root {
+  /* ── Paleta de cores ── */
+  --cor-primaria: #006cfd;
+  --cor-secundaria: #050002;
+  --cor-destaque: #fe0506;
+  --cor-sucesso: #2e7d32;
+  --cor-erro: #b3261e;
+  --cor-texto-claro: #ffffff;
+  --cor-fundo: #ffffff;
+  --cor-fundo-alt: #ebebeb;
+
+  /* ── Tipografia ── */
+  --fonte-base: "Inter", sans-serif;
+  --fonte-titulo: "Roboto Mono", monospace;
+
+  /* ── Tamanhos de fonte ── */
+  --texto-display: clamp(2rem, 5vw, 4rem);
+  --texto-h1: clamp(1.75rem, 4vw, 3rem);
+  --texto-h2: 2rem;
+  --texto-h3: 1.5rem;
+  --texto-base: 1rem;
+  --texto-sm: 0.875rem;
+  --texto-xs: 0.75rem;
+
+  /* ── Espaçamento ── */
+  --espaco-xs: 0.25rem;
+  --espaco-sm: 0.5rem;
+  --espaco-md: 1rem;
+  --espaco-lg: 2rem;
+  --espaco-xl: 4rem;
+
+  /* ── Bordas ── */
+  --raio-sm: 4px;
+  --raio-md: 8px;
+  --raio-lg: 16px;
+  --raio-circulo: 9999px;
+
+  /* ── Sombras ── */
+  --sombra-sm: 0 1px 3px rgba(0, 0, 0, 0.12);
+  --sombra-md: 0 4px 6px rgba(0, 0, 0, 0.1);
+  --sombra-lg: 0 10px 25px rgba(0, 0, 0, 0.15);
+
+  /* ── Transições ── */
+  --transicao: 200ms ease-in-out;
+
+  /* ── Layout ── */
+  --largura-max: 1200px;
+  --altura-nav: 68px;
+}

@@ -1,0 +1,512 @@
+@import url("./at05-reset.css");
+@import url("./at05-variables.css");
+
+/* ─── 1. Base ───────────────────────────────────── */
+
+body {
+  background-color: var(--cor-fundo);
+  color: var(--cor-texto);
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+.titulo__atividade {
+  font-family: var(--fonte-titulo);
+  margin-top: 0;
+  margin-bottom: var(--espaco-md);
+  color: var(--cor-secundaria);
+}
+
+h1 {
+  font-size: var(--texto-h1);
+}
+
+h2 {
+  font-size: var(--texto-h2);
+}
+
+h3,
+.titulo__atividade {
+  font-size: var(--texto-h3);
+}
+
+p {
+  font-family: var(--fonte-base);
+}
+
+header {
+  height: var(--altura-nav);
+  background-color: var(--cor-primaria);
+}
+
+/* ─── 2. Layout ─────────────────────────────────── */
+
+.docs-container {
+  padding: var(--espaco-xl) var(--espaco-lg);
+  max-width: var(--largura-max);
+  margin: 0 auto;
+}
+
+.docs-section {
+  margin-bottom: var(--espaco-xl);
+}
+
+.docs-section h2 {
+  border-bottom: 2px solid var(--cor-fundo-alt);
+  padding-bottom: var(--espaco-sm);
+  margin-bottom: var(--espaco-lg);
+}
+
+/* ─── 3. Componentes ────────────────────────────── */
+
+/* Header e Nav */
+header {
+  height: var(--altura-nav);
+  position: sticky;
+  top: 0;
+  background-color: rgba(
+    0,
+    108,
+    253,
+    0.95
+  ); /* Azul primário com leve transparência */
+  backdrop-filter: blur(8px); /* Efeito de vidro */
+  z-index: 100;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 var(--espaco-lg);
+  box-shadow: var(--sombra-md);
+  border-bottom: 2px solid var(--cor-secundaria);
+}
+
+.titulo__atividade {
+  font-family: var(--fonte-titulo);
+  color: var(--cor-texto-claro);
+  font-weight: 700;
+  font-size: 1.1rem;
+  margin: 0;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+  align-items: center;
+  gap: var(--espaco-lg);
+}
+
+nav a {
+  text-decoration: none;
+  color: rgba(255, 255, 255, 0.85);
+  font-family: var(--fonte-base);
+  font-weight: 600;
+  font-size: var(--texto-sm);
+  padding: var(--espaco-xs) var(--espaco-sm);
+  border-radius: var(--raio-sm);
+  transition: var(--transicao);
+  position: relative;
+}
+
+nav a::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  width: 0;
+  height: 2px;
+  background-color: var(--cor-destaque);
+  transition: var(--transicao);
+  transform: translateX(-50%);
+}
+
+nav a:hover {
+  color: var(--cor-texto-claro);
+  background-color: rgba(255, 255, 255, 0.1);
+}
+
+nav a:hover::after {
+  width: 100%;
+}
+
+/* Ajuste específico para o link "Voltar" para parecer um botão discreto */
+nav li:last-child a {
+  background-color: var(--cor-secundaria);
+  color: var(--cor-texto-claro);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+nav li:last-child a:hover {
+  background-color: var(--cor-destaque);
+  border-color: var(--cor-destaque);
+}
+
+nav li:last-child a::after {
+  display: none;
+}
+
+/* Hero */
+section.hero {
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  /* CORREÇÃO: Gradiente e URL separados por vírgula */
+  background-image:
+    linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)),
+    url("./assets/A Hard Days Night.jpg");
+  background-size: cover;
+  background-position: center;
+  color: var(--cor-texto-claro);
+  padding: var(--espaco-lg);
+}
+
+.hero__titulo {
+  font-size: var(--texto-display);
+  color: var(--cor-texto-claro);
+  margin-bottom: var(--espaco-sm);
+}
+
+.hero__subtitulo {
+  font-size: 1.25rem;
+  margin-bottom: 2rem;
+}
+
+a.btn {
+  display: inline-block;
+  text-decoration: none;
+}
+
+/* Botões */
+.button-group {
+  display: flex;
+  gap: var(--espaco-md);
+  margin-bottom: var(--espaco-lg);
+  flex-wrap: wrap;
+}
+
+.btn {
+  display: inline-block;
+  padding: var(--espaco-sm) var(--espaco-md);
+  border: 2px solid transparent;
+  border-radius: var(--raio-md);
+  font-family: var(--fonte-base);
+  font-weight: 600;
+  text-decoration: none;
+  text-align: center;
+  cursor: pointer;
+  transition: var(--transicao);
+}
+
+.btn--primario {
+  background-color: var(--cor-primaria);
+  color: var(--cor-texto-claro);
+}
+
+.btn--primario:hover {
+  background-color: var(--cor-fundo);
+  color: var(--cor-primaria);
+  border-color: var(--cor-primaria);
+}
+
+.btn--secundario {
+  background-color: var(--cor-fundo-alt);
+  color: var(--cor-secundaria);
+  border-color: var(--cor-secundaria);
+}
+
+.btn--secundario:hover {
+  background-color: var(--cor-secundaria);
+  color: var(--cor-texto-claro);
+}
+
+.btn--perigo {
+  background-color: var(--cor-erro);
+  color: var(--cor-texto-claro);
+}
+
+.btn--perigo:hover {
+  background-color: var(--cor-fundo);
+  color: var(--cor-erro);
+  border-color: var(--cor-erro);
+}
+
+.btn:focus-visible {
+  outline: 2px solid var(--cor-destaque);
+  outline-offset: 2px;
+}
+
+.btn:disabled,
+.btn[disabled] {
+  opacity: 0.5;
+  cursor: not-allowed;
+  pointer-events: none;
+  background-color: var(--cor-fundo-alt);
+  color: var(--cor-texto);
+  text-decoration: none;
+  font-style: normal;
+}
+
+/* Cards */
+.card {
+  position: relative;
+  background-color: var(--cor-fundo);
+  border-radius: var(--raio-lg);
+  overflow: hidden;
+  box-shadow: var(--sombra-md);
+  transition: var(--transicao);
+  height: 100%;
+}
+
+.card:hover {
+  box-shadow: var(--sombra-lg);
+  transform: translateY(-4px);
+}
+
+.card__badge {
+  position: absolute;
+  top: var(--espaco-md);
+  right: var(--espaco-md);
+  background-color: var(--cor-destaque);
+  color: var(--cor-texto-claro);
+  padding: var(--espaco-xs) var(--espaco-sm);
+  border-radius: var(--raio-sm);
+  font-size: var(--texto-xs);
+  font-weight: bold;
+  z-index: 10;
+  box-shadow: var(--sombra-sm);
+}
+
+.card__imagem {
+  height: 200px;
+  background-image: url("./assets/A Hard Days Night.jpg");
+  background-size: cover;
+  background-position: center;
+  background-color: var(--cor-fundo-alt);
+}
+
+.card__corpo {
+  padding: var(--espaco-md);
+  display: flex;
+  flex-direction: column;
+  gap: var(--espaco-sm);
+}
+
+.card__titulo {
+  margin: 0;
+  font-size: var(--texto-h3);
+  color: var(--cor-secundaria);
+}
+
+.card__texto {
+  margin: 0;
+  font-size: var(--texto-sm);
+  color: var(--cor-texto);
+  line-height: 1.4;
+}
+
+.card__link {
+  align-self: flex-start;
+  color: var(--cor-primaria);
+  text-decoration: none;
+  font-weight: bold;
+  font-size: var(--texto-sm);
+  transition: var(--transicao);
+}
+
+.card__link:hover {
+  color: var(--cor-destaque);
+  padding-left: var(--espaco-xs);
+}
+
+/* Table */
+.tokens-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-bottom: var(--espaco-lg);
+  box-shadow: var(--sombra-sm);
+  border-radius: var(--raio-md);
+  overflow: hidden;
+}
+
+.tokens-table__color {
+  width: 60px;
+  height: 60px;
+  border: 1px solid var(--cor-fundo-alt);
+  border-radius: var(--raio-sm);
+}
+
+.tokens-table th {
+  background-color: var(--cor-fundo-alt);
+  color: var(--cor-secundaria);
+  font-weight: bold;
+}
+
+.tokens-table th,
+.tokens-table td {
+  padding: var(--espaco-sm) var(--espaco-md);
+  border-bottom: 1px solid var(--cor-fundo-alt);
+}
+
+.tokens-table tr:nth-child(even) {
+  background-color: rgba(0, 0, 0, 0.02);
+}
+
+.tokens-table tr:last-child td {
+  border-bottom: none;
+}
+
+/* Formulário */
+.form {
+  display: flex;
+  flex-direction: column;
+  gap: var(--espaco-md);
+  background-color: var(--cor-fundo);
+  padding: var(--espaco-lg);
+  border-radius: var(--raio-lg);
+  box-shadow: var(--sombra-md);
+  max-width: 500px;
+}
+
+.form__grupo {
+  display: flex;
+  flex-direction: column;
+  gap: var(--espaco-xs);
+}
+
+.form__label {
+  font-weight: 600;
+  font-size: var(--texto-sm);
+  color: var(--cor-secundaria);
+}
+
+.form__input {
+  padding: var(--espaco-sm);
+  border: 2px solid var(--cor-fundo-alt);
+  border-radius: var(--raio-md);
+  background-color: var(--cor-fundo);
+  font-family: var(--fonte-base);
+  transition: var(--transicao);
+}
+
+.form__input::placeholder {
+  color: #999;
+}
+
+.form__input:focus {
+  outline: none;
+  border-color: var(--cor-primaria);
+  box-shadow: 0 0 0 3px rgba(0, 108, 253, 0.1);
+}
+
+/* Estados de validação */
+.form__input:required {
+  border-left-width: 4px;
+}
+
+.form__input:not(:placeholder-shown):valid {
+  border-color: var(--cor-sucesso);
+}
+
+.form__input:not(:placeholder-shown):invalid {
+  border-color: var(--cor-erro);
+}
+
+.form__mensagem-erro {
+  display: none;
+  color: var(--cor-erro);
+  font-size: var(--texto-xs);
+  font-weight: 500;
+  margin-top: 2px;
+}
+
+.form__input:not(:placeholder-shown):invalid ~ .form__mensagem-erro,
+.form__fieldset:invalid ~ .form__mensagem-erro {
+  display: block;
+}
+
+/* Fieldset e Opções */
+.form__fieldset {
+  border: 2px solid var(--cor-fundo-alt);
+  padding: var(--espaco-md);
+  border-radius: var(--raio-md);
+  display: flex;
+  flex-direction: column;
+  gap: var(--espaco-sm);
+}
+
+.form__fieldset .form__label {
+  padding: 0 var(--espaco-xs);
+  margin-bottom: var(--espaco-xs);
+}
+
+.form__opcao {
+  display: flex;
+  align-items: center;
+  gap: var(--espaco-sm);
+}
+
+.form__input-radio {
+  width: 1.25rem;
+  height: 1.25rem;
+  cursor: pointer;
+  accent-color: var(--cor-primaria);
+}
+
+.form__label-radio {
+  font-size: var(--texto-sm);
+  cursor: pointer;
+  color: var(--cor-texto);
+}
+
+.form__botao {
+  margin-top: var(--espaco-sm);
+  width: 100%;
+}
+
+/* Footer */
+footer {
+  background-color: var(--cor-secundaria);
+  color: var(--cor-texto-claro);
+  padding: var(--espaco-xl) var(--espaco-lg) var(--espaco-lg);
+  text-align: center;
+  border-top: 4px solid var(--cor-primaria);
+}
+
+footer h2 {
+  color: var(--cor-destaque);
+  font-size: var(--texto-h3);
+  margin-bottom: var(--espaco-md);
+}
+
+footer p {
+  font-size: var(--texto-sm);
+  margin-bottom: var(--espaco-sm);
+  opacity: 0.9;
+}
+
+footer a {
+  color: var(--cor-primaria);
+  text-decoration: none;
+  font-weight: 600;
+  transition: var(--transicao);
+}
+
+footer a:hover {
+  color: var(--cor-texto-claro);
+  text-decoration: underline;
+}
+
+footer p:last-child {
+  margin-top: var(--espaco-lg);
+  padding-top: var(--espaco-md);
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+  font-family: var(--fonte-titulo);
+  opacity: 0.5;
+}
