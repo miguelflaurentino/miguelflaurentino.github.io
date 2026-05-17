@@ -3,18 +3,141 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Atividade 1 - Capítulo 5</title>
+    <link rel="stylesheet" href="at04.css" />
+    <title>Atividade 4 - Capítulo 7</title>
   </head>
-  <body>
-    <header>
-      <h1>Atividade 4 do Capítulo 7</h1>
+  <body id="topo">
+    <nav class="nav-fixa" aria-label="Navegação principal">
+      <ul>
+        <li><a href="#secao1" aria-label="Ir para a Seção 1">Seção 1</a></li>
+        <li><a href="#secao2" aria-label="Ir para a Seção 2">Seção 2</a></li>
+        <li><a href="#secao3" aria-label="Ir para a Seção 3">Seção 3</a></li>
+        <li><a href="../index.html" aria-label="Sair e voltar para a página inicial">Sair</a></li>
+      </ul>
+    </nav>
 
-      <nav aria-label="Navegação secundária">
-        <ul>
-          <li><a href="../index.html">Voltar para a página principal</a></li>
-        </ul>
-      </nav>
-    </header>
+    <main>
+      <header>
+        <h1>Artigo sobre Posicionamento CSS</h1>
+        <p>
+          Este artigo demonstra o uso de fixed, sticky, relative e absolute.
+        </p>
+      </header>
+
+      <section id="secao1">
+        <h2 class="titulo-sticky">Explorando o Posicionamento</h2>
+        <p class="texto-longo">
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam,
+          quae. Possimus, quos. Quisquam, quae. Possimus, quos. Lorem ipsum
+          dolor sit amet consectetur adipisicing elit. Quisquam, quae. Possimus,
+          quos.
+        </p>
+        <p class="texto-longo">
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Optio,
+          perferendis. Architecto, eveniet! Provident, nemo. Quisquam, quae.
+          Possimus, quos. Lorem ipsum dolor sit amet consectetur adipisicing
+          elit. Optio, perferendis. Architecto, eveniet! Provident, nemo.
+        </p>
+
+        <article class="cartao-destaque">
+          <span class="selo">DESTAQUE</span>
+          <h3>Novidade em CSS</h3>
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Optio,
+            perferendis. Architecto, eveniet! Provident, nemo. Lorem ipsum dolor
+            sit amet consectetur adipisicing elit. Optio, perferendis.
+            Architecto, eveniet! Provident, nemo.
+          </p>
+        </article>
+
+        <p class="texto-longo">
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Optio,
+          perferendis. Architecto, eveniet! Provident, nemo. Lorem ipsum dolor
+          sit amet consectetur adipisicing elit. Optio, perferendis. Architecto,
+          eveniet! Provident, nemo.
+        </p>
+      </section>
+
+      <section id="secao2">
+        <h2 class="titulo-sticky">Vantagens do Sticky</h2>
+        <p class="texto-longo">
+          Lorem ipsum <strong>dolor</strong> sit amet consectetur adipisicing
+          elit. Optio, perferendis. Architecto, eveniet! Provident, nemo. Lorem
+          ipsum dolor sit amet consectetur adipisicing elit. Optio, perferendis.
+          Architecto, eveniet! Provident, nemo.
+        </p>
+        <p class="texto-longo">
+          Passe o mouse sobre
+          <span class="tooltip-container">
+            esta palavra
+            <span class="tooltip-texto">Esta é a dica de contexto!</span>
+          </span>
+          para ver o tooltip.
+        </p>
+        <p class="texto-longo">
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Optio,
+          perferendis. Architecto, eveniet! Provident, nemo. Lorem ipsum dolor
+          sit amet consectetur adipisicing elit. Optio, perferendis. Architecto,
+          eveniet! Provident, nemo. Lorem ipsum dolor sit amet consectetur
+          adipisicing elit. Optio, perferendis. Architecto, eveniet! Provident,
+          nemo.
+        </p>
+        <p class="texto-longo">
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Optio,
+          perferendis. Architecto, eveniet! Provident, nemo. Lorem ipsum dolor
+          sit amet consectetur adipisicing elit. Optio, perferendis. Architecto,
+          eveniet! Provident, nemo. Lorem ipsum dolor sit amet consectetur
+          adipisicing elit. Optio, perferendis. Architecto, eveniet! Provident,
+          nemo.
+        </p>
+      </section>
+
+      <section id="secao3">
+        <h2 class="titulo-sticky">O Poder do Fixed</h2>
+        <p class="texto-longo">
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Optio,
+          perferendis. Architecto, eveniet! Provident, nemo. Lorem ipsum dolor
+          sit amet consectetur adipisicing elit. Optio, perferendis. Architecto,
+          eveniet! Provident, nemo. Lorem ipsum dolor sit amet consectetur
+          adipisicing elit. Optio, perferendis. Architecto, eveniet! Provident,
+          nemo.
+        </p>
+        <p class="texto-longo">
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Optio,
+          perferendis. Architecto, eveniet! Provident, nemo. Lorem ipsum dolor
+          sit amet consectetur adipisicing elit. Optio, perferendis. Architecto,
+          eveniet! Provident, nemo. Lorem ipsum dolor sit amet consectetur
+          adipisicing elit. Optio, perferendis. Architecto, eveniet! Provident,
+          nemo.
+        </p>
+        <p class="texto-longo">
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Optio,
+          perferendis. Architecto, eveniet! Provident, nemo. Lorem ipsum dolor
+          sit amet consectetur adipisicing elit. Optio, perferendis. Architecto,
+          eveniet! Provident, nemo. Lorem ipsum dolor sit amet consectetur
+          adipisicing elit. Optio, perferendis. Architecto, eveniet! Provident,
+          nemo.
+        </p>
+        <p class="texto-longo">
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Optio,
+          perferendis. Architecto, eveniet! Provident, nemo. Lorem ipsum dolor
+          sit amet consectetur adipisicing elit. Optio, perferendis. Architecto,
+          eveniet! Provident, nemo. Lorem ipsum dolor sit amet consectetur
+          adipisicing elit. Optio, perferendis. Architecto, eveniet! Provident,
+          nemo.
+        </p>
+        <p class="texto-longo">
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Optio,
+          perferendis. Architecto, eveniet! Provident, nemo. Lorem ipsum dolor
+          sit amet consectetur adipisicing elit. Optio, perferendis. Architecto,
+          eveniet! Provident, nemo. Lorem ipsum dolor sit amet consectetur
+          adipisicing elit. Optio, perferendis. Architecto, eveniet! Provident,
+          nemo.
+        </p>
+      </section>
+    </main>
+
+    <a href="#topo" class="btn-topo" aria-label="Voltar ao topo">↑</a>
 
     <footer>
       <section>
