@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Atividade 1 - Capítulo 5</title>
+    <title>Atividade 5 - Capítulo 7</title>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -121,24 +121,34 @@
             onsubmit="return false;"
           >
             <div class="form__grupo">
-              <label class="form__label" for="nome">Nome completo</label>
+              <label class="form__label" for="nome">Nome completo: <span aria-hidden="true">*</span></label>
               <input
                 class="form__input"
                 type="text"
                 id="nome"
+                name="nome"
                 placeholder="Ex: John Lennon"
+                minlength="5"
+                maxlength="100"
+                autocomplete="name"
+                title="Informe seu nome completo (mínimo 5 caracteres)"
+                aria-required="true"
                 required
               />
-              <span class="form__mensagem-erro">Campo obrigatório.</span>
+              <span class="form__mensagem-erro">Campo obrigatório (mínimo 5 caracteres).</span>
             </div>
 
             <div class="form__grupo">
-              <label class="form__label" for="email">E-mail corporativo</label>
+              <label class="form__label" for="email">E-mail corporativo: <span aria-hidden="true">*</span></label>
               <input
                 class="form__input"
                 type="email"
                 id="email"
+                name="email"
                 placeholder="john@beatles.com"
+                autocomplete="email"
+                title="Informe seu e-mail corporativo (ex: usuario@empresa.com)"
+                aria-required="true"
                 required
               />
               <span class="form__mensagem-erro">Insira um e-mail válido.</span>
@@ -146,7 +156,7 @@
 
             <div class="form__grupo">
               <fieldset class="form__fieldset">
-                <legend class="form__label">Turno de preferência</legend>
+                <legend class="form__label">Turno de preferência: <span aria-hidden="true">*</span></legend>
 
                 <div class="form__opcao">
                   <input
@@ -155,6 +165,8 @@
                     name="turno"
                     value="manha"
                     id="manha"
+                    title="Selecione o turno da manhã"
+                    aria-required="true"
                     required
                   />
                   <label class="form__label-radio" for="manha">Manhã</label>
@@ -167,6 +179,7 @@
                     name="turno"
                     value="tarde"
                     id="tarde"
+                    title="Selecione o turno da tarde"
                   />
                   <label class="form__label-radio" for="tarde">Tarde</label>
                 </div>
@@ -178,28 +191,33 @@
                     name="turno"
                     value="noite"
                     id="noite"
+                    title="Selecione o turno da noite"
                   />
                   <label class="form__label-radio" for="noite">Noite</label>
                 </div>
               </fieldset>
 
               <span class="form__mensagem-erro"
-                >Selecione ao menos um período.</span
+                >Selecione um turno.</span
               >
             </div>
 
             <div class="form__grupo">
               <label class="form__label" for="interesse"
-                >Instrumento de interesse</label
+                >Instrumento de interesse: <span aria-hidden="true">*</span></label
               >
-              <select class="form__input" id="interesse" required>
+              <select class="form__input" id="interesse" name="interesse" title="Selecione o instrumento de seu interesse" aria-required="true" required>
                 <option value="" disabled selected>
                   Selecione uma opção...
                 </option>
-                <option value="vocal">Vocal</option>
-                <option value="guitarra">Guitarra Acústica</option>
-                <option value="baixo">Baixo</option>
-                <option value="bateria">Bateria</option>
+                <optgroup label="Voz">
+                  <option value="vocal">Vocal</option>
+                </optgroup>
+                <optgroup label="Instrumentos">
+                  <option value="guitarra">Guitarra Acústica</option>
+                  <option value="baixo">Baixo</option>
+                  <option value="bateria">Bateria</option>
+                </optgroup>
               </select>
               <span class="form__mensagem-erro"
                 >Por favor, selecione um instrumento.</span
