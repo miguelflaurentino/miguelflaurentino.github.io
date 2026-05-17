@@ -4,10 +4,17 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Atividade 1 - Capítulo 5</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@0,100..700;1,100..700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./at05-style.css" />
   </head>
   <body>
     <header>
-      <h1>Atividade 5 do Capítulo 7</h1>
+      <h1>Atividade 5 do Capítulo 7: Mini Design System</h1>
 
       <nav aria-label="Navegação secundária">
         <ul>
@@ -15,6 +22,90 @@
         </ul>
       </nav>
     </header>
+
+    <main>
+      <section class="hero" aria-labelledby="hero-title">
+        <div class="hero__content">
+          <h1 id="hero-title" class="hero__title">A Hard Day's UI</h1>
+          <p class="hero__subtitle">
+            Um design system construído com precisão, alto contraste e semântica
+            moderna.
+          </p>
+          <button class="btn btn--primary">Explorar Componentes</button>
+        </div>
+      </section>
+
+      <div class="docs-container">
+        <section class="docs-section" aria-labelledby="cards-title">
+          <h2 id="cards-title" class="docs-section__title">Cards</h2>
+
+          <article class="card">
+            <span class="card__badge">Destaque</span>
+            <div class="card__body">
+              <h3 class="card__title">Tipografia Fluida</h3>
+              <p class="card__description">
+                O sistema utiliza funções como clamp() para garantir que a
+                leitura seja agradável em qualquer dispositivo.
+              </p>
+              <a href="#" class="card__link">Leia a documentação</a>
+            </div>
+          </article>
+        </section>
+
+        <section class="docs-section" aria-labelledby="buttons-title">
+          <h2 id="buttons-title" class="docs-section__title">Botões</h2>
+
+          <div class="button-group">
+            <button class="btn btn--primary">Ação Principal</button>
+            <button class="btn btn--secondary">Ação Secundária</button>
+            <button class="btn btn--disabled" disabled>Desabilitado</button>
+          </div>
+        </section>
+
+        <section class="docs-section" aria-labelledby="inputs-title">
+          <h2 id="inputs-title" class="docs-section__title">Formulários</h2>
+
+          <form
+            class="form-group"
+            action="#"
+            method="POST"
+            onsubmit="return false;"
+          >
+            <label for="email-input" class="form-group__label"
+              >Assine nossa newsletter</label
+            >
+            <div class="form-group__input-wrapper">
+              <input
+                type="email"
+                id="email-input"
+                class="form-group__input"
+                placeholder="john@beatles.com"
+                required
+              />
+              <button type="submit" class="btn btn--primary form-group__submit">
+                Enviar
+              </button>
+            </div>
+          </form>
+        </section>
+
+        <section class="docs-section" aria-labelledby="tooltips-title">
+          <h2 id="tooltips-title" class="docs-section__title">Tooltips</h2>
+
+          <div class="tooltip-wrapper">
+            <button
+              class="btn btn--secondary tooltip-trigger"
+              aria-describedby="tooltip-info"
+            >
+              Passe o mouse aqui
+            </button>
+            <div id="tooltip-info" class="tooltip-content" role="tooltip">
+              Informação complementar sobre esta ação.
+            </div>
+          </div>
+        </section>
+      </div>
+    </main>
 
     <footer>
       <section>
