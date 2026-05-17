@@ -1,0 +1,295 @@
+/* ─── 1. Reset ─────────────────────────────────── */
+
+/* 1. Use a more-intuitive box-sizing model */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* 2. Remove default margin */
+*:not(dialog) {
+  margin: 0;
+}
+
+/* 3. Enable keyword animations */
+@media (prefers-reduced-motion: no-preference) {
+  html {
+    interpolate-size: allow-keywords;
+  }
+}
+
+body {
+  /* 4. Increase line-height */
+  line-height: 1.5;
+  /* 5. Improve text rendering */
+  -webkit-font-smoothing: antialiased;
+}
+
+/* 6. Improve media defaults */
+img,
+picture,
+video,
+canvas,
+svg {
+  display: block;
+  max-width: 100%;
+}
+
+/* 7. Inherit fonts for form controls */
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+/* 8. Avoid text overflows */
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  overflow-wrap: break-word;
+}
+
+/* 9. Improve line wrapping */
+p {
+  text-wrap: pretty;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  text-wrap: balance;
+}
+
+/*
+  10. Create a root stacking context
+*/
+#root,
+#__next {
+  isolation: isolate;
+}
+
+/* ─── 2. Variáveis ──────────────────────────────── */
+
+:root {
+  --primary-color: #007bff;
+  --success-color: #28a745;
+  --danger-color: #dc3545;
+  --warning-color: #ffc107;
+  --info-color: #17a2b8;
+  --gray-light: #f8f9fa;
+  --gray-medium: #e9ecef;
+  --gray-dark: #6c757d;
+  --highlight-color: #6f42c1;
+}
+
+/* ─── 3. Base ───────────────────────────────────── */
+
+body {
+  font-family: system-ui, -apple-system, sans-serif;
+  max-width: 800px;
+  margin-inline: auto;
+  padding: 2rem;
+  background-color: #fff;
+  color: #333;
+}
+
+header {
+  border-bottom: 2px solid var(--gray-medium);
+  margin-bottom: 2rem;
+  padding-bottom: 1rem;
+}
+
+main section {
+  margin-bottom: 3rem;
+  padding: 1.5rem;
+  border: 1px solid var(--gray-medium);
+  border-radius: 8px;
+}
+
+main h2 {
+  margin-bottom: 1.5rem;
+  color: var(--gray-dark);
+  border-left: 5px solid var(--primary-color);
+  padding-left: 0.5rem;
+}
+
+ul, ol {
+  margin-left: 1.5rem;
+}
+
+li {
+  margin-bottom: 0.5rem;
+}
+
+/* ─── 4. Layout ─────────────────────────────────── */
+
+main {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+/* ─── 5. Componentes ────────────────────────────── */
+
+/* Seção 1 — Seletores de atributo */
+#sec-atributo a[href^="https"] {
+  color: var(--success-color);
+}
+
+#sec-atributo a[href^="http"]:not([href^="https"])::after {
+  content: " ⚠";
+  color: var(--danger-color);
+}
+
+#sec-atributo a[href^="http"]:not([href^="https"]) {
+  color: var(--danger-color);
+}
+
+#sec-atributo a[href$=".pdf"] {
+  color: orange;
+}
+
+#sec-atributo a[href$=".pdf"]::after {
+  content: " [PDF]";
+}
+
+#sec-atributo a[href^="#"] {
+  color: var(--gray-dark);
+  font-style: italic;
+}
+
+#sec-atributo a[target="_blank"]::after {
+  content: " ↗";
+}
+
+/* Seção 2 — Pseudo-classes estruturais */
+#sec-estrutural li:first-child {
+  font-weight: bold;
+}
+
+#sec-estrutural li:last-child {
+  color: var(--highlight-color);
+}
+
+#sec-estrutural li:nth-child(even) {
+  background-color: var(--gray-light);
+}
+
+#sec-estrutural li:nth-child(odd) {
+  background-color: var(--gray-medium);
+}
+
+#sec-estrutural li:nth-child(3) {
+  border-left: 4px solid var(--primary-color);
+  padding-left: 5px;
+}
+
+/* Seção 3 — Pseudo-classes de estado */
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+input:focus {
+  outline: 2px solid var(--primary-color);
+  outline-offset: 2px;
+}
+
+input:disabled {
+  background-color: var(--gray-medium);
+  cursor: not-allowed;
+}
+
+input:required {
+  border-left: 3px solid var(--warning-color);
+}
+
+input:not([type="checkbox"]):valid {
+  border-color: var(--success-color);
+}
+
+input:not([type="checkbox"]):invalid {
+  border-color: var(--danger-color);
+}
+
+input[type="checkbox"]:checked + label {
+  font-weight: bold;
+}
+
+button {
+  padding: 0.5rem 1rem;
+  background-color: var(--primary-color);
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  width: fit-content;
+}
+
+button:hover {
+  background-color: #0056b3;
+}
+
+/* Seção 4 — Pseudo-elementos */
+.citacao {
+  font-size: 1.25rem;
+  margin-block: 1rem;
+}
+
+.citacao::before {
+  content: "“";
+  font-size: 2rem;
+  color: var(--highlight-color);
+  vertical-align: middle;
+}
+
+.citacao::after {
+  content: "”";
+  font-size: 2rem;
+  color: var(--highlight-color);
+  vertical-align: middle;
+}
+
+.obrigatorio::after {
+  content: " *";
+  color: var(--danger-color);
+}
+
+::selection {
+  background-color: var(--highlight-color);
+  color: white;
+}
+
+.input-custom::placeholder {
+  color: var(--gray-dark);
+  font-style: italic;
+}
+
+/* Seção 5 — Combinadores e :not() */
+#sec-combinadores h3 + p {
+  font-size: 1.15rem;
+  color: var(--highlight-color);
+}
+
+#sec-combinadores li:not(.ativo) {
+  opacity: 0.5;
+}
+
+#sec-combinadores li.ativo {
+  font-weight: bold;
+}
+
+#sec-combinadores li.ativo::before {
+  content: "✔ ";
+}
+
+/* ─── 6. Utilitários ────────────────────────────── */
