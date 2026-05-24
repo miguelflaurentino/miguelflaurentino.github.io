@@ -1,0 +1,290 @@
+@import "variables.css";
+
+/* ─── 1. Base ───────────────────────────────────── */
+
+body {
+  background-color: var(--cor-fundo);
+  color: var(--cor-texto);
+  font-family: var(--fonte-base), serif;
+  font-size: var(--texto-base);
+  line-height: 1.6;
+  min-height: 100vh;
+  transition:
+    background-color var(--transicao),
+    color var(--transicao);
+}
+
+h1,
+h2,
+h3,
+h4 {
+  font-family: var(--fonte-titulo), sans-serif;
+  color: var(--cor-titulo);
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  margin-bottom: var(--espaco-sm);
+}
+
+a {
+  color: var(--cor-primaria);
+  text-decoration: none;
+  transition: var(--transicao);
+  position: relative;
+}
+
+a:hover {
+  color: var(--cor-titulo);
+}
+
+abbr {
+  border-bottom: 1px dotted var(--cor-texto);
+  cursor: help;
+}
+
+/* ─── 2. Layout ─────────────────────────────────── */
+
+.page-wrapper {
+  max-width: var(--largura-max);
+  margin: 0 auto;
+  padding: var(--espaco-md);
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: var(--espaco-lg);
+}
+
+@media (min-width: 1024px) {
+  .page-wrapper {
+    grid-template-columns: 1fr 300px;
+    grid-template-areas:
+      "intro sidebar"
+      "supporting sidebar";
+    padding: var(--espaco-xl) var(--espaco-lg);
+  }
+
+  .intro {
+    grid-area: intro;
+  }
+  .supporting {
+    grid-area: supporting;
+  }
+  .sidebar {
+    grid-area: sidebar;
+    position: sticky;
+    top: var(--espaco-lg);
+    height: fit-content;
+  }
+}
+
+/* ─── 3. Intro ───────────────────────────────────── */
+
+.intro {
+  display: flex;
+  flex-direction: column;
+  gap: var(--espaco-lg);
+  border-bottom: var(--border-style);
+  padding-bottom: var(--espaco-lg);
+}
+
+header[role="banner"] h1 {
+  font-size: var(--texto-display);
+  line-height: 1;
+  margin: 0;
+  color: var(--cor-titulo);
+}
+
+header[role="banner"] h1::after {
+  content: "Est. 2003 • Quality Design";
+  display: block;
+  font-size: var(--texto-sm);
+  color: var(--cor-primaria);
+  letter-spacing: 0.5em;
+  margin-top: var(--espaco-xs);
+}
+
+header[role="banner"] h2 {
+  font-size: var(--texto-h2);
+  color: var(--cor-texto);
+  font-weight: 300;
+  font-style: italic;
+  text-transform: none;
+}
+
+.summary {
+  background-color: var(--cor-secundaria);
+  padding: var(--espaco-md);
+  border: var(--border-style);
+  box-shadow: var(--sombra-md);
+}
+
+.summary p {
+  font-weight: bold;
+  font-style: italic;
+}
+
+.preamble h3 {
+  font-size: var(--texto-h1);
+  border-left: 8px solid var(--cor-primaria);
+  padding-left: var(--espaco-sm);
+}
+
+/* ─── 4. Supporting Content ──────────────────────── */
+
+.supporting {
+  display: grid;
+  gap: var(--espaco-xl);
+}
+
+.supporting > div {
+  display: flex;
+  flex-direction: column;
+  gap: var(--espaco-sm);
+}
+
+.supporting h3 {
+  font-size: var(--texto-h2);
+  position: relative;
+  display: inline-block;
+  width: fit-content;
+}
+
+.supporting h3::after {
+  content: "";
+  position: absolute;
+  bottom: -5px;
+  left: 0;
+  width: 100%;
+  height: 4px;
+  background-color: var(--cor-secundaria);
+  z-index: -1;
+}
+
+.explanation {
+  background-color: var(--cor-fundo-alt);
+  padding: var(--espaco-lg);
+  border-radius: var(--raio-md);
+}
+
+/* ─── 5. Sidebar ─────────────────────────────────── */
+
+.sidebar {
+  background-color: var(--cor-sidebar-fundo);
+  color: var(--cor-sidebar-texto);
+  padding: var(--espaco-md);
+  border-radius: var(--raio-sm);
+  transition:
+    background-color var(--transicao),
+    color var(--transicao);
+}
+
+.sidebar .wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: var(--espaco-lg);
+}
+
+.sidebar h3 {
+  color: var(--cor-secundaria);
+  font-size: var(--texto-sm);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+  padding-bottom: var(--espaco-xs);
+  margin-bottom: var(--espaco-md);
+}
+
+.sidebar ul {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: var(--espaco-sm);
+}
+
+.sidebar a {
+  display: inline-block;
+  color: var(--cor-sidebar-texto);
+  font-size: var(--texto-sm);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  transition: var(--transicao);
+}
+
+.sidebar a:hover {
+  color: var(--cor-secundaria);
+  transform: translateX(4px);
+}
+
+.sidebar li {
+  padding: var(--espaco-xs) 0;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.sidebar li:last-child {
+  border-bottom: none;
+}
+
+.design-name {
+  font-weight: bold;
+  display: block;
+}
+
+.designer-name {
+  font-size: var(--texto-xs);
+  opacity: 0.7;
+}
+
+/* ─── 6. Footer & Navigation ─────────────────────── */
+
+footer {
+  text-align: center;
+  padding: var(--espaco-lg) 0;
+  border-top: var(--border-style);
+  display: flex;
+  justify-content: center;
+  gap: var(--espaco-md);
+  flex-wrap: wrap;
+}
+
+footer a {
+  background-color: var(--cor-footer-fundo);
+  color: var(--cor-footer-texto);
+  padding: var(--espaco-xs) var(--espaco-md);
+  font-family: var(--fonte-titulo);
+  font-size: var(--texto-xs);
+  transition:
+    background-color var(--transicao),
+    color var(--transicao);
+}
+
+footer a:hover {
+  background-color: var(--cor-primaria);
+}
+
+/* ─── 7. Responsividade & Efeitos ────────────────── */
+
+@media (max-width: 768px) {
+  .page-wrapper {
+    padding: var(--espaco-md);
+  }
+
+  header[role="banner"] h1 {
+    font-size: var(--texto-h1);
+  }
+}
+
+.supporting a::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 0;
+  height: 2px;
+  background-color: var(--cor-primaria);
+  transition: var(--transicao);
+}
+
+.supporting a:hover::after {
+  width: 100%;
+}
+
+p {
+  max-width: 70ch;
+  text-wrap: pretty;
+}

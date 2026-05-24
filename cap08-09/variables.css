@@ -1,0 +1,82 @@
+@import url('https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400..700;1,400..700&family=Oswald:wght@300;400;700&display=swap');
+
+:root {
+  /* ── Paleta de cores ── */
+  --cor-fundo: #faf3e6;
+  --cor-texto: #3f3d3a;
+  --cor-titulo: #272625;
+  --cor-primaria: #e5452c;
+  --cor-secundaria: #ffb14d;
+  --cor-destaque: #bad1c2;
+  --cor-fundo-alt: #f0e8d9;
+  --cor-texto-claro: #faf3e6;
+  
+  /* ── Sidebar ── */
+  --cor-sidebar-fundo: var(--cor-titulo);
+  --cor-sidebar-texto: var(--cor-texto-claro);
+
+  /* ── Footer ── */
+  --cor-footer-fundo: var(--cor-titulo);
+  --cor-footer-texto: var(--cor-texto-claro);
+
+  /* ── Tipografia ── */
+  --fonte-base: "Lora", serif;
+  --fonte-titulo: "Oswald", sans-serif;
+
+  /* ── Tamanhos de fonte ── */
+  --texto-display: clamp(2.5rem, 8vw, 5rem);
+  --texto-h1: clamp(2rem, 6vw, 4rem);
+  --texto-h2: 2.25rem;
+  --texto-h3: 1.75rem;
+  --texto-base: 1.125rem;
+  --texto-sm: 0.875rem;
+  --texto-xs: 0.75rem;
+
+  /* ── Espaçamento ── */
+  --espaco-xs: 0.5rem;
+  --espaco-sm: 1rem;
+  --espaco-md: 1.5rem;
+  --espaco-lg: 3rem;
+  --espaco-xl: 5rem;
+
+  /* ── Bordas ── */
+  --raio-sm: 2px;
+  --raio-md: 4px;
+  --raio-lg: 8px;
+  --border-style: 2px solid var(--cor-titulo);
+
+  /* ── Sombras ── */
+  --sombra-sm: 2px 2px 0px rgba(0, 0, 0, 0.1);
+  --sombra-md: 4px 4px 0px rgba(0, 0, 0, 0.1);
+
+  /* ── Transições ── */
+  --transicao: 300ms cubic-bezier(0.4, 0, 0.2, 1);
+
+  /* ── Layout ── */
+  --largura-max: 1400px;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    /* ── Paleta de cores ── */
+    --cor-fundo: #181716;
+    --cor-texto: #e4dfd5;
+    --cor-titulo: #faf3e6;
+    --cor-primaria: #ff644d;
+    --cor-secundaria: #ffb14d;
+    --cor-destaque: #3b4e43;
+    --cor-fundo-alt: #242322;
+    --cor-texto-claro: #faf3e6;
+    
+    /* ── Sidebar ── */
+    --cor-sidebar-fundo: #242322;
+    --cor-sidebar-texto: #faf3e6;
+    
+    /* ── Footer ── */
+    --cor-footer-fundo: #242322;
+    --cor-footer-texto: #faf3e6;
+    
+    /* ── Bordas ── */
+    --border-style: 2px solid var(--cor-titulo);
+  }
+}
