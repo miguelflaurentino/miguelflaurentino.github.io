@@ -2,32 +2,356 @@
 <html lang="pt-BR">
   <head>
     <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title></title>
-    <link href="./reset.css" rel="stylesheet" />
-    <link href="./at01.css" rel="stylesheet" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Sala de Aula</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined"
+      rel="stylesheet"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@0,100..700;1,100..700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./reset.css" />
+    <link rel="stylesheet" href="./at01.css" />
   </head>
   <body>
-    <header></header>
+    <input type="checkbox" id="menu-toggle" class="menu-toggle" />
+    <label for="menu-toggle" class="menu-backdrop" aria-hidden="true"></label>
 
-    <main>
-      <section class="cards-section">
-        <h2>Cards</h2>
-        <div style="margin-bottom: 3rem; max-width: 300px; max-height: 300px">
-          <article class="card">
-            <div class="card__imagem"></div>
-            <div class="card__corpo">
-              <h3 class="card__titulo">
-                2026.1 Fundamentos de Sistema de Informação
-              </h3>
-              <h4>FSI 2026.1</h4>
-              <p class="card__nome">Fabrísia Ferreira</p>
-            </div>
-          </article>
+    <header class="cabecalho-global">
+      <div class="cabecalho-global__esquerda">
+        <label
+          for="menu-toggle"
+          class="botao-icone"
+          aria-label="Menu principal"
+        >
+          <span class="material-symbols-outlined" aria-hidden="true">menu</span>
+        </label>
+        <div class="logo">
+          <img
+            class="logo__imagem"
+            src="./assets/icons8-google-classroom-48.png"
+            alt="Google Classroom logo"
+            aria-hidden="true"
+          />
+          <span class="logo__texto">Sala de Aula</span>
         </div>
-      </section>
-    </main>
+      </div>
 
-    <footer></footer>
+      <div class="cabecalho-global__direita">
+        <button
+          type="button"
+          class="botao-icone"
+          aria-label="Criar ou participar de uma turma"
+        >
+          <span class="material-symbols-outlined" aria-hidden="true">add</span>
+        </button>
+        <button type="button" class="botao-icone" aria-label="Google Apps">
+          <span class="material-symbols-outlined" aria-hidden="true">apps</span>
+        </button>
+        <button type="button" class="botao-perfil" aria-label="Conta do Google">
+          <img
+            class="avatar-usuario"
+            src="./assets/person-icon-vetor.jpg"
+            alt="Sua foto de perfil"
+          />
+        </button>
+      </div>
+    </header>
+
+    <div class="layout-principal">
+      <aside class="barra-lateral" aria-label="Navegação lateral">
+        <nav class="nav-lateral">
+          <div class="perfil-lateral">
+            <img
+              class="perfil-lateral__avatar"
+              src="./assets/person-icon-vetor.jpg"
+              alt="Foto de perfil de usuário ativo"
+            />
+            <div class="perfil-lateral__info">
+              <span class="perfil-lateral__nome">Nome do Usuário</span>
+              <span class="perfil-lateral__email">nu10@aluno.ifal.edu.br</span>
+            </div>
+          </div>
+
+          <ul class="nav-lateral__lista">
+            <li class="nav-lateral__item nav-lateral__item--ativo">
+              <a href="#" aria-current="page">
+                <span class="material-symbols-outlined" aria-hidden="true"
+                  >home</span
+                >
+                <span class="nav-lateral__texto">Início</span>
+              </a>
+            </li>
+            <li class="nav-lateral__item">
+              <a href="#">
+                <span class="material-symbols-outlined" aria-hidden="true"
+                  >calendar_today</span
+                >
+                <span class="nav-lateral__texto">Agenda</span>
+              </a>
+            </li>
+          </ul>
+
+          <div class="nav-lateral__grupo">
+            <button class="nav-lateral__grupo-btn" aria-expanded="true">
+              <span class="material-symbols-outlined" aria-hidden="true"
+                >school</span
+              >
+              <span class="nav-lateral__texto">Minhas inscrições</span>
+              <span
+                class="material-symbols-outlined icone-expansao"
+                aria-hidden="true"
+                >keyboard_arrow_up</span
+              >
+            </button>
+
+            <ul class="nav-lateral__lista nav-lateral__grupo-lista">
+              <li class="nav-lateral__item">
+                <a href="#">
+                  <span class="material-symbols-outlined" aria-hidden="true"
+                    >assignment_late</span
+                  >
+                  <span class="nav-lateral__texto">Pendentes</span>
+                </a>
+              </li>
+
+              <li class="nav-lateral__item">
+                <a href="#">
+                  <div
+                    class="avatar-turma avatar-turma--cinza"
+                    aria-hidden="true"
+                  >
+                    2
+                  </div>
+                  <span class="nav-lateral__texto nav-lateral__texto--truncado"
+                    >2026.1 Fundamentos de Siste...</span
+                  >
+                </a>
+              </li>
+              <li class="nav-lateral__item">
+                <a href="#">
+                  <div
+                    class="avatar-turma avatar-turma--verde"
+                    aria-hidden="true"
+                  >
+                    A
+                  </div>
+                  <div class="nav-lateral__bloco-texto">
+                    <span
+                      class="nav-lateral__texto nav-lateral__texto--truncado"
+                      >ALPG BSI - 2026.1</span
+                    >
+                    <span class="nav-lateral__subtexto"
+                      >BSI - Algoritmos e Lógica de Programa...</span
+                    >
+                  </div>
+                </a>
+              </li>
+              <li class="nav-lateral__item">
+                <a href="#">
+                  <div
+                    class="avatar-turma avatar-turma--azul"
+                    aria-hidden="true"
+                  >
+                    I
+                  </div>
+                  <div class="nav-lateral__bloco-texto">
+                    <span
+                      class="nav-lateral__texto nav-lateral__texto--truncado"
+                      >INTW102-BSI-2026.1</span
+                    >
+                    <span class="nav-lateral__subtexto">2026.1</span>
+                  </div>
+                </a>
+              </li>
+            </ul>
+          </div>
+
+          <ul class="nav-lateral__lista">
+            <li class="nav-lateral__item">
+              <a href="#">
+                <span class="material-symbols-outlined" aria-hidden="true"
+                  >archive</span
+                >
+                <span class="nav-lateral__texto">Turmas arquivadas</span>
+              </a>
+            </li>
+            <li class="nav-lateral__item">
+              <a href="#">
+                <span class="material-symbols-outlined" aria-hidden="true"
+                  >settings</span
+                >
+                <span class="nav-lateral__texto">Configurações</span>
+              </a>
+            </li>
+          </ul>
+        </nav>
+      </aside>
+
+      <main class="conteudo-principal">
+        <section class="cards-section">
+          <h2 class="sr-only">Turmas inscritas</h2>
+
+          <div class="cards-container">
+            <article class="card">
+              <header class="card__cabecalho">
+                <div class="card__capa">
+                  <h3 class="card__titulo">
+                    <a href="#">2026.1 Fundamentos d...</a>
+                  </h3>
+                  <p class="card__nome">Fabrisia Ferreira de Araujo</p>
+                </div>
+                <img
+                  class="card__avatar"
+                  src="./assets/person-icon-vetor.jpg"
+                  alt="Foto de perfil de Fabrisia Ferreira"
+                />
+              </header>
+              <div class="card__corpo"></div>
+              <footer class="card__rodape">
+                <button
+                  type="button"
+                  class="card__icone-btn"
+                  aria-label="Abrir suas atividades"
+                >
+                  <span class="material-symbols-outlined" aria-hidden="true"
+                    >assignment_ind</span
+                  >
+                </button>
+                <button
+                  type="button"
+                  class="card__icone-btn"
+                  aria-label="Abrir pasta no Google Drive"
+                >
+                  <span class="material-symbols-outlined" aria-hidden="true"
+                    >folder</span
+                  >
+                </button>
+                <button
+                  type="button"
+                  class="card__icone-btn"
+                  aria-label="Mais opções"
+                >
+                  <span class="material-symbols-outlined" aria-hidden="true"
+                    >more_vert</span
+                  >
+                </button>
+              </footer>
+            </article>
+
+            <article class="card">
+              <header class="card__cabecalho">
+                <div class="card__capa">
+                  <h3 class="card__titulo">
+                    <a href="#">ALPG BSI - 2026.1</a>
+                  </h3>
+                  <p class="card__subtitulo">
+                    BSI - Algoritmos e Lógica de ...
+                  </p>
+                  <p class="card__nome">Kenji Kamei</p>
+                </div>
+                <img
+                  class="card__avatar"
+                  src="./assets/person-icon-vetor.jpg"
+                  alt="Foto de perfil de Kenji Kamei"
+                />
+              </header>
+              <div class="card__corpo">
+                <div class="card__atividade">
+                  <p class="card__prazo">Data de entrega: domingo</p>
+                  <p class="card__descricao">Lista 6</p>
+                </div>
+              </div>
+              <footer class="card__rodape">
+                <button
+                  type="button"
+                  class="card__icone-btn"
+                  aria-label="Abrir suas atividades"
+                >
+                  <span class="material-symbols-outlined" aria-hidden="true"
+                    >assignment_ind</span
+                  >
+                </button>
+                <button
+                  type="button"
+                  class="card__icone-btn"
+                  aria-label="Abrir pasta no Google Drive"
+                >
+                  <span class="material-symbols-outlined" aria-hidden="true"
+                    >folder</span
+                  >
+                </button>
+                <button
+                  type="button"
+                  class="card__icone-btn"
+                  aria-label="Mais opções"
+                >
+                  <span class="material-symbols-outlined" aria-hidden="true"
+                    >more_vert</span
+                  >
+                </button>
+              </footer>
+            </article>
+
+            <article class="card">
+              <header class="card__cabecalho">
+                <div class="card__capa">
+                  <h3 class="card__titulo">
+                    <a href="#">INTW102-BSI-2026.1</a>
+                  </h3>
+                  <p class="card__subtitulo">2026.1</p>
+                  <p class="card__nome">Leo Fernandes</p>
+                </div>
+                <img
+                  class="card__avatar"
+                  src="./assets/person-icon-vetor.jpg"
+                  alt="Foto de perfil de Leo Fernandes"
+                />
+              </header>
+              <div class="card__corpo"></div>
+              <footer class="card__rodape">
+                <button
+                  type="button"
+                  class="card__icone-btn"
+                  aria-label="Abrir suas atividades"
+                >
+                  <span class="material-symbols-outlined" aria-hidden="true"
+                    >assignment_ind</span
+                  >
+                </button>
+                <button
+                  type="button"
+                  class="card__icone-btn"
+                  aria-label="Abrir pasta no Google Drive"
+                >
+                  <span class="material-symbols-outlined" aria-hidden="true"
+                    >folder</span
+                  >
+                </button>
+                <button
+                  type="button"
+                  class="card__icone-btn"
+                  aria-label="Mais opções"
+                >
+                  <span class="material-symbols-outlined" aria-hidden="true"
+                    >more_vert</span
+                  >
+                </button>
+              </footer>
+            </article>
+          </div>
+        </section>
+      </main>
+    </div>
+
+    <footer class="rodape-flutuante">
+      <button type="button" class="botao-ajuda" aria-label="Ajuda e suporte">
+        <span class="material-symbols-outlined" aria-hidden="true">help</span>
+      </button>
+    </footer>
   </body>
 </html>
