@@ -3,221 +3,277 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Miguel Laurentino</title>
+    <meta
+      name="description"
+      content="Portfólio e página pessoal de Miguel Laurentino, estudante de Bacharelado em Sistemas de Informação no IFAL."
+    />
+    <title>Miguel Laurentino — Sistemas de Informação · IFAL</title>
+
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0&icon_names=close,menu"
+    />
+
+    <link rel="stylesheet" href="./css/reset.css" />
+    <link rel="stylesheet" href="./css/variables.css" />
+    <link rel="stylesheet" href="./css/base.css" />
+    <link rel="stylesheet" href="./css/layout.css" />
+    <link rel="stylesheet" href="./css/components.css" />
+    <link rel="stylesheet" href="./css/utilities.css" />
   </head>
   <body>
     <header>
-      <img
-        src="./assets/photome.jpg"
-        alt="Uma foto de perfil do estudante Miguel Laurentino."
-        width="100"
-      />
-      <h1>Miguel Laurentino</h1>
-      <p>
-        <strong>Bacharelado de Sistemas de Informação</strong> - Instituto
-        Federal de Alagoas - 1º Semestre
-      </p>
+      <div class="header-inner">
+        <img
+          class="profile-photo"
+          src="./assets/photome.jpg"
+          alt="Foto de perfil de Miguel Laurentino."
+          width="110"
+          height="110"
+        />
 
-      <nav aria-label="Sumário">
-        <h2>Sumário</h2>
+        <div class="header-info">
+          <h1>Miguel Laurentino</h1>
+          <p class="subtitle">
+            Bacharelado em Sistemas de Informação · Instituto Federal de Alagoas
+            · 1º Semestre
+          </p>
+        </div>
 
-        <ol>
-          <li><a href="#sobre_mim">Sobre mim</a></li>
-          <li><a href="#hab_tec">Habilidades técnicas</a></li>
-          <li><a href="#idiomas">Idiomas</a></li>
-          <li><a href="#sobre_curso">Sobre o curso</a></li>
-          <li>
-            <a href="#atvs">Atividades de Introdução às Tecnologias Web</a>
-          </li>
-          <li><a href="#infos">Contato</a></li>
-        </ol>
-      </nav>
+        <a
+          href="#site-aside"
+          class="nav-toggle"
+          aria-label="Abrir sumário de navegação"
+        >
+          <span class="material-symbols-outlined"> menu </span>
+        </a>
+      </div>
     </header>
 
-    <main>
-      <section>
-        <h2 id="sobre_mim">Sobre mim</h2>
-        <p>
-          Sou estudante e aspirante a desenvolvedor de software. Sou
-          comprometido com o aprendizado contínuo e apaixonado por construir
-          soluções eficientes e bem estruturadas. Nascido em 2007 e possuo
-          diploma em Desenvolvimento de Sistemas pelo
-          <abbr title="Instituto Federal de Alagoas">IFAL</abbr>. Atualmente,
-          também estou cursando bacharelado no
-          <abbr title="Instituto Federal de Alagoas">IFAL</abbr>, estudando
-          Sistemas de Informação. Sou apaixonado por tecnologia desde criança,
-          por isso quero seguir carreira nessa área. Tenho conhecimentos em
-          desenvolvimento backend com JavaScript, mas atualmente estou estudando
-          Python para criar soluções e APIs.
-        </p>
-      </section>
+    <div class="page-wrapper">
+      <aside
+        class="site-aside"
+        id="site-aside"
+        aria-label="Sumário de navegação"
+      >
+        <a href="#" class="aside-close" aria-label="Fechar menu">
+          <span class="material-symbols-outlined"> close </span>
+        </a>
 
-      <section>
-        <h2 id="hab_tec">Habilidades técnicas</h2>
-        <ul>
-          <li>JavaScript</li>
-          <li>Python (estudando)</li>
-          <li>Kotlin (básico)</li>
-          <li>Git</li>
-          <li>GitHub</li>
-          <li>Algorithms</li>
-        </ul>
-      </section>
+        <nav class="site-nav" aria-label="Sumário">
+          <h2>Sumário</h2>
+          <ol>
+            <li><a href="#sobre_mim">Sobre mim</a></li>
+            <li><a href="#hab_tec">Habilidades técnicas</a></li>
+            <li><a href="#idiomas">Idiomas</a></li>
+            <li><a href="#sobre_curso">Sobre o curso</a></li>
+            <li><a href="#atvs">Atividades INTWeb</a></li>
+            <li><a href="#infos">Contato</a></li>
+          </ol>
+        </nav>
+      </aside>
 
-      <section>
-        <h2 id="idiomas">Idiomas</h2>
-        <ul>
-          <li>Português - Nativo</li>
-          <li>Inglês - Básico / Intermediário</li>
-        </ul>
-      </section>
+      <a href="#" class="aside-overlay" aria-hidden="true"></a>
 
-      <section>
-        <h2 id="sobre_curso">Sobre o curso</h2>
-        <p>
-          Um graduado em Sistemas de Informação é um profissional
-          multidisciplinar que conecta Ciência da Computação, Matemática e
-          Gestão. Sua principal missão é projetar, implementar e gerenciar
-          soluções computacionais complexas que atendam às necessidades
-          estratégicas de organizações públicas e privadas.
-        </p>
-        <a
-          href="https://www2.ifal.edu.br/campus/maceio/ensino/cursos/superior/bacharelado-em-sistemas-de-informacao"
-          target="_blank"
-          rel="noopener noreferrer"
-          >Página oficial do curso de Sistemas de Informação no IFAL</a
-        >
-      </section>
-
-      <section>
-        <h2 id="atvs">Atividades de Introdução às Tecnologias Web</h2>
-
-        <article>
-          <h3>Capítulo 4 — Tabelas, Listas e Mídia</h3>
-          <nav aria-label="Atividades do Capítulo 4">
-            <ul>
-              <li>
-                <a href="./cap04/at01.html">Atividade 1 — Tabela Básica</a>
-              </li>
-              <li>
-                <a href="./cap04/at02.html"
-                  >Atividade 2 — Tabela Semântica com Mesclagem</a
-                >
-              </li>
-              <li>
-                <a href="./cap04/at03.html"
-                  >Atividade 3 — Listas Avançadas e Glossário Técnico</a
-                >
-              </li>
-              <li>
-                <a href="./cap04/at04.html">Atividade 4 — Página Multimídia</a>
-              </li>
-            </ul>
-          </nav>
-        </article>
-
-        <article>
-          <h3>Capítulo 5 — Formulários HTML</h3>
-          <nav aria-label="Atividades do Capítulo 5">
-            <ul>
-              <li>
-                <a href="cap05/at01.html"
-                  >Atividade 1 — Formulário de Contato Simples</a
-                >
-              </li>
-              <li>
-                <a href="cap05/at02.html">Atividade 2 — Cadastro de Usuário</a>
-              </li>
-              <li>
-                <a href="cap05/at03.html"
-                  >Atividade 3 — Formulário de Matrícula Acadêmica</a
-                >
-              </li>
-              <li>
-                <a href="cap05/at04.html"
-                  >Atividade 4 — Inscrição em Evento com Campos Avançados</a
-                >
-              </li>
-              <li>
-                <a href="cap05/at05.html"
-                  >Atividade 5 — Formulário de Pesquisa Acadêmica</a
-                >
-              </li>
-            </ul>
-          </nav>
-        </article>
-
-        <article>
-          <h3>Capítulo 7 — Fundamentos do CSS</h3>
-          <nav aria-label="Atividades do Capítulo 7">
-            <ul>
-              <li>
-                <a href="cap07/at01.html"
-                  >Atividade 1 — Cartão de Apresentação</a
-                >
-              </li>
-              <li>
-                <a href="cap07/at02.html">Atividade 2 — Artigo Tipográfico</a>
-              </li>
-              <li>
-                <a href="cap07/at03.html">Atividade 3 — Galeria de Seletores</a>
-              </li>
-              <li>
-                <a href="cap07/at04.html"
-                  >Atividade 4 — Página com Posicionamento</a
-                >
-              </li>
-              <li>
-                <a href="cap07/at05.html"
-                  >Atividade 5 — Tooltip (<code
-                    >position: absolute + visibility</code
-                  >)</a
-                >
-              </li>
-            </ul>
-          </nav>
-        </article>
-
-        <article>
-          <h3>Atividade dos Capítulos 8 e 9 - Flexbox e CSS Grid</h3>
-
-          <nav aria-label="Atividade dos Capítulos 8 e 9">
-            <ul>
-              <li>
-                <a href="./cap08-09/at01.html">Atividade 1 - CSS Zen Garden</a>
-              </li>
-            </ul>
-          </nav>
-        </article>
-
-        <article>
-          <h3>Capítulo 10 — Design Responsivo</h3>
-
-          <nav aria-label="Atividade do Capítulo 10">
-            <ul>
-              <li>
-                <a href="cap10/at01.html">AT01 — Recriação Responsiva</a>
-              </li>
-            </ul>
-          </nav>
-        </article>
-      </section>
-    </main>
-
-    <footer>
-      <section>
-        <h2 id="infos">Contato</h2>
-
-        <address>
+      <main>
+        <section id="sobre_mim" aria-labelledby="title-sobre">
+          <h2 id="title-sobre" class="section-title">Sobre mim</h2>
           <p>
-            Email:
-            <a href="mailto:mfl15@aluno.ifal.edu.br">mfl15@aluno.ifal.edu.br</a>
+            Sou estudante e aspirante a desenvolvedor de software. Sou
+            comprometido com o aprendizado contínuo e apaixonado por construir
+            soluções eficientes e bem estruturadas. Nascido em 2007 e possuo
+            diploma em Desenvolvimento de Sistemas pelo
+            <abbr title="Instituto Federal de Alagoas">IFAL</abbr>. Atualmente,
+            também estou cursando bacharelado no
+            <abbr title="Instituto Federal de Alagoas">IFAL</abbr>, estudando
+            Sistemas de Informação. Sou apaixonado por tecnologia desde criança,
+            por isso quero seguir carreira nessa área. Tenho conhecimentos em
+            desenvolvimento backend com JavaScript, mas atualmente estou
+            estudando Python para criar soluções e APIs.
           </p>
-          <p>Celular/Whatsapp: +55 (82) 98158-3751</p>
-        </address>
-      </section>
+        </section>
 
-      <p>&copy; Miguel Laurentino - 2026</p>
+        <section id="hab_tec" aria-labelledby="title-habilidades">
+          <h2 id="title-habilidades" class="section-title">
+            Habilidades técnicas
+          </h2>
+          <ul class="skill-list">
+            <li>JavaScript</li>
+            <li>Python (estudando)</li>
+            <li>Kotlin (básico)</li>
+            <li>Git</li>
+            <li>GitHub</li>
+            <li>Algoritmos</li>
+          </ul>
+        </section>
+
+        <section id="idiomas" aria-labelledby="title-idiomas">
+          <h2 id="title-idiomas" class="section-title">Idiomas</h2>
+          <ul class="skill-list">
+            <li>Português — Nativo</li>
+            <li>Inglês — Básico / Intermediário</li>
+          </ul>
+        </section>
+
+        <section id="sobre_curso" aria-labelledby="title-curso">
+          <h2 id="title-curso" class="section-title">Sobre o curso</h2>
+          <p>
+            Um graduado em Sistemas de Informação é um profissional
+            multidisciplinar que conecta Ciência da Computação, Matemática e
+            Gestão. Sua principal missão é projetar, implementar e gerenciar
+            soluções computacionais complexas que atendam às necessidades
+            estratégicas de organizações públicas e privadas.
+          </p>
+          <a
+            href="https://www2.ifal.edu.br/campus/maceio/ensino/cursos/superior/bacharelado-em-sistemas-de-informacao"
+            target="_blank"
+            rel="noopener noreferrer"
+            >Página oficial do curso de Sistemas de Informação no IFAL</a
+          >
+        </section>
+
+        <section id="atvs" aria-labelledby="title-atividades">
+          <h2 id="title-atividades" class="section-title">
+            Atividades de Introdução às Tecnologias Web
+          </h2>
+
+          <article class="activity-card">
+            <h3>Capítulo 4 — Tabelas, Listas e Mídia</h3>
+            <nav aria-label="Atividades do Capítulo 4">
+              <ul class="activity-list">
+                <li>
+                  <a href="./cap04/at01.html">Atividade 1 — Tabela Básica</a>
+                </li>
+                <li>
+                  <a href="./cap04/at02.html"
+                    >Atividade 2 — Tabela Semântica com Mesclagem</a
+                  >
+                </li>
+                <li>
+                  <a href="./cap04/at03.html"
+                    >Atividade 3 — Listas Avançadas e Glossário Técnico</a
+                  >
+                </li>
+                <li>
+                  <a href="./cap04/at04.html"
+                    >Atividade 4 — Página Multimídia</a
+                  >
+                </li>
+              </ul>
+            </nav>
+          </article>
+
+          <article class="activity-card">
+            <h3>Capítulo 5 — Formulários HTML</h3>
+            <nav aria-label="Atividades do Capítulo 5">
+              <ul class="activity-list">
+                <li>
+                  <a href="cap05/at01.html"
+                    >Atividade 1 — Formulário de Contato Simples</a
+                  >
+                </li>
+                <li>
+                  <a href="cap05/at02.html"
+                    >Atividade 2 — Cadastro de Usuário</a
+                  >
+                </li>
+                <li>
+                  <a href="cap05/at03.html"
+                    >Atividade 3 — Formulário de Matrícula Acadêmica</a
+                  >
+                </li>
+                <li>
+                  <a href="cap05/at04.html"
+                    >Atividade 4 — Inscrição em Evento com Campos Avançados</a
+                  >
+                </li>
+                <li>
+                  <a href="cap05/at05.html"
+                    >Atividade 5 — Formulário de Pesquisa Acadêmica</a
+                  >
+                </li>
+              </ul>
+            </nav>
+          </article>
+
+          <article class="activity-card">
+            <h3>Capítulo 7 — Fundamentos do CSS</h3>
+            <nav aria-label="Atividades do Capítulo 7">
+              <ul class="activity-list">
+                <li>
+                  <a href="cap07/at01.html"
+                    >Atividade 1 — Cartão de Apresentação</a
+                  >
+                </li>
+                <li>
+                  <a href="cap07/at02.html">Atividade 2 — Artigo Tipográfico</a>
+                </li>
+                <li>
+                  <a href="cap07/at03.html"
+                    >Atividade 3 — Galeria de Seletores</a
+                  >
+                </li>
+                <li>
+                  <a href="cap07/at04.html"
+                    >Atividade 4 — Página com Posicionamento</a
+                  >
+                </li>
+                <li>
+                  <a href="cap07/at05.html"
+                    >Atividade 5 — Tooltip (<code
+                      >position: absolute + visibility</code
+                    >)</a
+                  >
+                </li>
+              </ul>
+            </nav>
+          </article>
+
+          <article class="activity-card">
+            <h3>Capítulos 8 e 9 — Flexbox e CSS Grid</h3>
+            <nav aria-label="Atividade dos Capítulos 8 e 9">
+              <ul class="activity-list">
+                <li>
+                  <a href="./cap08-09/at01.html"
+                    >Atividade 1 — CSS Zen Garden</a
+                  >
+                </li>
+              </ul>
+            </nav>
+          </article>
+
+          <article class="activity-card">
+            <h3>Capítulo 10 — Design Responsivo</h3>
+            <nav aria-label="Atividade do Capítulo 10">
+              <ul class="activity-list">
+                <li>
+                  <a href="cap10/at01.html"
+                    >Atividade 1 — Recriação Responsiva</a
+                  >
+                </li>
+              </ul>
+            </nav>
+          </article>
+        </section>
+      </main>
+    </div>
+    <footer>
+      <div class="footer-inner">
+        <section class="contact-section" aria-labelledby="infos">
+          <h2 id="infos">Contato</h2>
+          <address>
+            <p>
+              Email:
+              <a href="mailto:mfl15@aluno.ifal.edu.br"
+                >mfl15@aluno.ifal.edu.br</a
+              >
+            </p>
+            <p>Celular / WhatsApp: +55 (82) 98158-3751</p>
+          </address>
+        </section>
+
+        <p class="copyright">&copy; Miguel Laurentino — 2026</p>
+      </div>
     </footer>
   </body>
 </html>
