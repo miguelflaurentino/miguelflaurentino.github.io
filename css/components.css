@@ -6,6 +6,7 @@
   height: 80px;
   border-radius: 50%;
   object-fit: cover;
+  object-position: center top; /* move a imagem para baixo para não cortar a cabeça */
   border: 3px solid var(--color-accent);
   box-shadow:
     var(--shadow-md),
