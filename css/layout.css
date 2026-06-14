@@ -1,0 +1,210 @@
+/* ═════   Layout   ════════════════════════════════ */
+
+/* ─────   HEADER   ────────────────────────────────── */
+header {
+  background-color: var(--color-nav-bg);
+  color: var(--color-nav-text);
+  padding: var(--space-xl) var(--space-sm) var(--space-md); /* aumentado topo para var(--space-xl) */
+  position: relative;
+}
+
+header::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 3px;
+  background: linear-gradient(
+    90deg,
+    var(--color-accent) 0%,
+    var(--color-highlight) 50%,
+    var(--color-accent) 100%
+  );
+}
+
+.header-inner {
+  max-width: var(--max-width);
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  gap: var(--space-md);
+  padding-right: 50px;
+}
+
+.header-info {
+  flex: 1;
+  min-width: 0;
+}
+
+/* ─────   OVERLAY   ───────────────────────────────── */
+.aside-overlay {
+  position: fixed;
+  inset: 0;
+  background-color: rgba(0, 0, 0, 0.6);
+  backdrop-filter: blur(3px);
+  -webkit-backdrop-filter: blur(3px);
+  z-index: 299;
+  opacity: 0;
+  visibility: hidden;
+  transition:
+    opacity var(--transition),
+    visibility var(--transition);
+  cursor: pointer;
+}
+
+/* ─────   PAGE WRAPPER   ──────────────────────────── */
+.page-wrapper {
+  max-width: var(--max-width);
+  margin: 0 auto;
+  padding: var(--space-lg) var(--space-sm);
+  display: block;
+}
+
+/* ─────   ASIDE   ────────────────────────────────── */
+.site-aside {
+  position: fixed;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  width: min(300px, 85vw);
+  z-index: 300;
+
+  background-color: var(--color-nav-bg);
+  color: var(--color-nav-text);
+  padding: var(--space-xl) var(--space-md) var(--space-md);
+  overflow-y: auto;
+
+  transform: translateX(-110%);
+  visibility: hidden;
+  transition:
+    transform var(--transition),
+    visibility var(--transition);
+}
+
+.site-aside::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  width: 3px;
+  background: linear-gradient(
+    180deg,
+    var(--color-accent) 0%,
+    var(--color-highlight) 100%
+  );
+}
+
+/* TARGET HACK */
+#site-aside:target {
+  transform: translateX(0);
+  visibility: visible;
+  box-shadow: 8px 0 32px rgba(0, 0, 0, 0.4);
+}
+
+#site-aside:target ~ .aside-overlay {
+  opacity: 1;
+  visibility: visible;
+}
+
+/* ─────   MAIN   ─────────────────────────────────── */
+main {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-lg);
+}
+
+section {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-md);
+}
+
+/* ─────   FOOTER   ───────────────────────────────── */
+footer {
+  background-color: var(--color-footer-bg);
+  color: var(--color-footer-text);
+  padding: var(--space-xl) var(--space-sm) var(--space-lg);
+  border-top: 3px solid var(--color-accent);
+}
+
+.footer-inner {
+  max-width: var(--max-width);
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-lg);
+}
+
+/* ═════   TABLET  ≥ 640px   ════════════════════════ */
+@media (min-width: 640px) {
+  header {
+    padding: var(--space-lg) var(--space-md);
+  }
+
+  .page-wrapper {
+    padding: var(--space-xl) var(--space-md);
+    gap: var(--space-xl);
+  }
+
+  footer {
+    padding: var(--space-xl) var(--space-md) var(--space-lg);
+  }
+}
+
+/* ═════   DESKTOP  ≥ 1024px   ══════════════════════ */
+@media (min-width: 1024px) {
+  .aside-close,
+  .aside-overlay,
+  .nav-toggle {
+    display: none !important;
+  }
+
+  .page-wrapper {
+    display: grid;
+    grid-template-columns: 1fr var(--sidebar-width);
+    align-items: start;
+  }
+
+  .site-aside {
+    grid-column: 2;
+    grid-row: 1;
+    position: sticky;
+    top: var(--space-lg);
+    border-top: none;
+    border-left: 3px solid var(--color-accent);
+    /* Reset mobile drawer behavior */
+    transform: none !important;
+    visibility: visible !important;
+    width: var(--sidebar-width);
+    height: auto;
+    padding: var(--space-xl) var(--space-md);
+    box-shadow: none !important;
+    transition: none !important;
+  }
+
+  .site-aside::after {
+    display: none;
+  }
+
+  main {
+    grid-column: 1;
+    grid-row: 1;
+  }
+
+  .header-inner {
+    padding-right: 0;
+  }
+}
+
+/* ═════   WIDE  ≥ 1280px   ═════════════════════════ */
+@media (min-width: 1280px) {
+  .page-wrapper {
+    padding: var(--space-xl) var(--space-lg);
+  }
+
+  header {
+    padding: var(--space-xl) var(--space-lg);
+  }
+}
